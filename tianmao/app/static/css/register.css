@@ -1,0 +1,232 @@
+	body,
+	html {
+		font: 12px "微软雅黑" Arial;
+		background: #fff;
+	}
+	
+	li {
+		list-style: none;
+	}
+	
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	b {
+		font-weight: normal;
+		font-size: 100%;
+	}
+	
+	i,
+	em {
+		font-style: normal;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	input {
+		outline: none;
+	}
+	
+	.clearfix:after {
+		content: " ";
+		display: block;
+		height: 0;
+		visibility: hidden;
+		clear: both;
+	}
+	/*页面开始*/
+	
+	.header {
+		width: 1000px;
+		height: 50px;
+		border-bottom: 3px solid #e5e5e5;
+		margin: 0 auto;
+		line-height: 50px;
+	}
+	
+	.header .circle {
+		display: inline-block;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		background: #ccc;
+		line-height: 30px;
+		text-align: center;
+		margin-right: 5px;
+	}
+	
+	.header ul li {
+		float: left;
+		width: 33%;
+		font-weight: 900;
+		text-align: center;
+		color: #999;
+	}
+	
+	.header ul .active {
+		color: #000;
+		font-weight: 900;
+		border-bottom: 3px solid red;
+	}
+	
+	.header ul .active .circle {
+		background: red;
+		color: #fff;
+	}
+	
+	.biao1 {
+		/*text-align: center;*/
+		margin-top: 100px;
+		
+	}
+	.biao1 .biao{
+		margin-left: 600px;
+		/*display: none;*/
+	}
+	.biao1 .biao h4 span{
+		font-size: 12px;
+		color: #000;
+		margin-right: 20px;
+		
+	}
+	.biao1 .biao h4 .span{
+		margin-right: 30px;
+	}
+	.biao1 h4 .tel {
+		width: 300px;
+		height: 30px;
+		padding-left: 10px;
+		border: 1px solid #dedede;
+		/*float: left;*/
+	}
+	
+	.biao1 h4 .kuang {
+		display: inline-block;
+		width: 300px;
+		height: 30px;
+		border: 1px solid #dedede;
+		background: #e8e8e8;
+		margin-top: 20px;
+		position: relative;
+		color: #fff;
+	}
+	
+	.biao1 .lock {
+		width: 50px;
+		height: 30px;
+		float: left;
+		background: #fff;
+		position: absolute;
+	}
+	
+	.biao1 .sub {
+		width: 200px;
+		height: 40px;
+		line-height: 40px;
+		background: red;
+		border: none;
+		border-radius: 5px;
+		color: #fff;
+		margin-top: 50px;
+		margin-left: 70px;
+		text-align: center;
+	}
+	
+	.biao2 {
+		margin: 0 auto;
+		width: 400px;
+		height: 500px;
+		display: none;
+	}
+	
+	.biao2 h4 {
+		font-size: 12px;
+		color: #3c3c3c;
+		font-weight: 700;
+		margin-top: 50px;
+	}
+	
+	.biao2 h4 i {
+		margin-left: 50px;
+	}
+	
+	.biao2 h4 b {
+		margin-left: 20px;
+		color: #3c3c3c;
+		font-weight: 700;
+	}
+	
+	.biao2 p i {
+		margin-left: 33px;
+		margin-right: 20px;
+	}
+	
+	.biao2 p .i3 {
+		margin-left: 40px;
+		margin-right: 20px;
+	}
+	
+	.biao2 h4 span {
+		margin-left: 15px;
+		color: #999;
+		font-weight: normal;
+	}
+	
+	.biao2 p {
+		font-size: 12px;
+		margin-top: 25px;
+		color: #999;
+	}
+	
+	.biao2 p input {
+		width: 230px;
+		height: 35px;
+		padding-left: 10px;
+		box-sizing: border-box;
+		font-size: 12px;
+	}
+	
+	.biao2 .sub {
+		width: 200px;
+		height: 40px;
+		line-height: 40px;
+		background: red;
+		border: none;
+		border-radius: 5px;
+		color: #fff;
+		margin-top: 50px;
+		margin-left: 90px;
+	}
+	.success{
+		display: none;
+	}
+	.success p .circle {
+		display: inline-block;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		background: green;
+		line-height: 50px;
+		font-size: 40px;
+		text-align: center;
+		color: #fff;
+		margin-right: 20px;
+	}
+	
+	.success p {
+		font-size: 40px;
+		color: #000;
+		line-height: 50px;
+		height: 50px;
+		margin: 100px 650px;
+	}

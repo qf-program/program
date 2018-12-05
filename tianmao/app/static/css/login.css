@@ -1,0 +1,313 @@
+.container{
+	width: 1190px;
+	margin: 0 auto;
+}
+#header-wrap{
+	height: 88px;
+
+}
+.header{
+	height: 88px;
+	line-height: 88px;
+	padding-top: 30px;
+	box-sizing: border-box;
+}
+.logo{
+	/*float: left;*/
+	
+}
+.logo a{
+	display: block;
+	width: 190px;
+	height: 27px;
+	background: url(../images/loginlogo.png);
+	background-size: cover;
+	text-indent: -9999px;
+}
+#banner-wrap{
+	width: 100%;
+	height: 600px;
+	background: rgb(255, 127, 0);;
+}
+.banner{
+	position: relative;
+}
+.banner {
+	display: block;
+	width: 1190px;
+	height: 600px;
+	background: url(../images/banner.jpg);
+	/*z-index: -1;*/
+	
+}
+#banner-wrap  .dl{
+	width: 350px;
+	height: 400px;
+	background: #FFFFFF;
+	position: absolute;
+	right: 80px;
+	top: 50px;
+	z-index: 2;
+	padding-left: 20px;
+	box-sizing: border-box;
+	/*display: none;*/
+}
+
+#banner-wrap  .dl1{
+	width: 350px;
+	height: 400px;
+	background: #FFFFFF;
+	position: absolute;
+	right: 80px;
+	top: 80px;
+	/*z-index: 2;*/
+	/*padding-left: 20px;*/
+	box-sizing: border-box;
+	/*display: none;*/
+}
+.dl1 p{
+	font-weight: 700;
+	margin-top: 30px;
+	font-size: 18px;
+	margin-left: 20px;
+}
+.dl1 .dengluma{
+	width: 140px;
+	height: 140px;
+	background: url(../images/TB137myswHqK1RjSZFkwu0.WFXa.png)no-repeat;
+	/*margin: 50px auto;*/
+	position: absolute;
+	left: 100px;
+	top: 100px;
+}
+.dl,   p{
+	font-weight: 900;
+	margin-top: 30px;
+	font-size: 20px;
+}
+.dl #username{
+	width: 300px;
+	height: 36px;
+	margin-top: 20px;
+	padding-left: 50px;
+	box-sizing: border-box;
+	color: #999;
+}
+.dl #password{
+	width: 300px;
+	height: 36px;
+	margin-top: 20px;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+.dl #denglu{
+	width: 300px;
+	height: 35px;
+	margin-top: 20px;
+	background: red;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+}
+.dl .a1{
+	display: block;
+	width: 35px;
+	height: 42px;
+	background: url(../images/QQ截图20181128204025.png)no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 78px;
+    left: 20px;
+}
+.dl .a2{
+	display: block;
+	width: 35px;
+	height: 35px;
+	background: url(../images/QQ截图20181128204115.png)no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 134px;
+    left: 20px;
+}
+.dl .erweima{
+	width: 50px;
+	height: 50px;
+	display: block;
+	background: url(../images/erweima.png)no-repeat;
+	background-size: 100%;
+	position: absolute;
+	right: 0px;
+	top: 10px;
+	cursor: pointer;
+}
+.dl1 .mima{
+    width: 50px;
+	height: 50px;
+	display: block;
+	background: url(../images/mima.png)no-repeat;
+	background-size: 100%;
+	position: absolute;
+	right: 0px;
+	top: 6px;
+	cursor: pointer;
+}
+.dl .saoma{
+	display: block;
+	width: 100px;
+	height: 40px;
+	background: url(../images/QQ截图20181128211657.png)no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 10px;
+	right: 50px;
+}
+
+.dl1 .saoma{
+	display: block;
+	width: 100px;
+	height: 40px;
+	background: url(../images/QQ截图20181128211657.png)no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 10px;
+	right: 50px;
+} 
+.dl .wangji{
+	margin-top: 20px;
+	/*float: right;*/
+	width: 180px;
+	margin-left: 130px;
+	font-weight: normal;
+}
+.dl .wangji a{
+	font-size: 12px;
+	color: #999;
+	
+}
+.dl .wangji a:hover{
+	color: red;
+}
+.dl1 .phone{
+	width: 120px;
+	height: 182px;
+	background: url(../images/img1.png)no-repeat;
+	position: absolute;
+	top: 65px;
+	right: 30px;
+	display: none;
+}
+.dl1 .sys{
+	width: 220px;
+	height: 50px;
+	/*background: red;*/
+	position: absolute;
+	top: 250px;
+	left: 80px;
+}
+.dl1 .sys .icon-saoyisaoerweimasaomasaomiao1{
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/erweimadenglu.png)no-repeat;
+	background-size: 100%;
+	color: red;
+	margin-top: 3px;
+	margin-right: 5px;
+	float: left;
+}
+.dl1 .sys p{
+	height: 30px;
+	width: 140px;
+	font-size: 12px;
+	color: red;
+	font-weight: normal;
+	float: left;
+	margin: 0px;
+}
+.dl1 .sys p span{
+	font-size: 12px;
+	color: #999;
+}
+.dl1 .sys p a{
+	font-size: 12px;
+	color: red;
+}
+
+.dl1 .wangji{
+	/*margin-top: 20px;*/
+	/*float: right;*/
+	width: 150px;
+	position: absolute;
+	bottom: 30px;
+	right: 0px;
+}
+.dl1 .wangji a{
+	font-size: 12px;
+	color: #999;
+	margin-right: 10px;
+	
+}
+.dl1 .wangji a:hover{
+	color: red;
+}
+#footer-wrap{
+height: 220px;
+margin-top: 30px;
+}
+.footer{
+	height: 220px;
+	margin-top: 30px;
+}
+.footer li {
+	float: left;
+}
+.footer1{
+	height: 34px;
+	line-height: 34px;
+}
+.footer2{
+	float: left;
+	height: 34px;
+	line-height: 34px;
+	margin-bottom: 10px;
+}
+.footer li a{
+	margin: 0 5px;
+	font-size: 12px;
+	color: #000000;
+	
+}
+
+.footer li a:hover{
+	text-decoration: underline;
+}
+.footer3{
+	float: left;
+  
+}
+.footer3 li{
+	float: left;
+	 margin-right: 50px;
+}
+.footer3 li span{
+	font-size: 12px;
+	color: #666;
+}
+.footer3 li a{
+	font-size: 10px;
+	color: #999999;
+}
+.footer3 li i{
+	color: #747774;
+	font-size: 12px;
+}
+.footer .banquan{
+	float: left;
+}
+.footer .banquan span{
+	color: #747774;
+	font-size: 12px;
+}
