@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+    <div class="banner">
+        <div class="container">
+            <div class="banner-list1">
+                <a href="#"><img src="../images/banner.jpg" alt=""></a>
+                <a href="#"><img src="../images/logo.png" alt=""></a>
+            </div>
+            <div class="kua">
+                <ul id="bn">
+                    <li class="active">扫码登录</li>
+                    <li>账号登录</li>
+                </ul>
+                <ul id="layot">
+                    <li style="display:block">
+                        <div class="erweima">
+                            <img src="../images/ma.jpg" alt="">
+                        </div>
+                        <div class="zc"><a href="../register/register.html">注册账号</a></div>
+                        <div class="bottom">
+                            <p>其它方式登录</p>
+                            <ul>
+                                <li><a href="#"><img src="../images/qq.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/weixin.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/zhifubao.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sina.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/rr.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <form action="login.php" id="form" method="post">
+                            <p><input type="text" name="uname" id="uname" placeholder="用户名"></p>
+                            <p><input type="password" name="upwd" id="upwd" placeholder="密码"></p>
+                            <div class="rd"><input type="checkbox">&emsp;两周内自动登陆<span><a href="#">忘记密码?</a></span></div>
+                            <div class="sub"><input type="submit" value="登录"></div>
+                        </form>
+                        <div class="zc"><a href="../register/register.html">注册账号</a></div>
+                        <div class="bottom">
+                            <p>其它方式登录</p>
+                            <ul>
+                                <li><a href="#"><img src="../images/qq.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/weixin.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/zhifubao.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sina.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/rr.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p><a href="#"><img src="../images/a.png" alt="">&nbsp;在线客服</a><a href="#"><img src="../images/tel.png" alt="">&nbsp;400-678-9688(24小时全国服务热线)</a></p>
+        <p>COPYRIGHT © 1996-2017 ALL RIGHTS RESERVED.粤ICP备05100288号</p>
+    </div>
+</body>
+
+</html>
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+    $("#bn li").click(function () {
+        var index = $(this).index("#bn li");
+        $(this).addClass("active").siblings().removeClass("active");
+        $("#layot>li:eq(" + index + ")").show().siblings().hide();
+    })
+</script>

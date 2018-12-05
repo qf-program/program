@@ -1,0 +1,22 @@
+[{
+        "Jid": "001",
+        "src": "shouji9.png",
+        "pinpai": "X23全面屏",
+        "clq": "双涡轮加速引擎|零光感人脸识别",
+        "price": "￥3498.00"
+    },
+    {
+        "Jid": "002",
+        "src": "shouji10.png",
+        "pinpai": "Z3 全面屏 6GB+64GB",
+        "clq": "高通骁龙710AIE处理器",
+        "price": "￥1898.00"
+    },
+    {
+        "Jid": "003",
+        "src": "shouji8.png",
+        "pinpai": "NEX旗舰版8GB+128GB",
+        "clq": "高通骁龙845处理器",
+        "price": "￥4298.00"
+    }
+]

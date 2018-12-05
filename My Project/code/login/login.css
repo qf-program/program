@@ -1,0 +1,196 @@
+.banner {
+    width: 100%;
+    height: 710px;
+    background: #391844;
+}
+
+.banner .container {
+    position: relative;
+}
+
+.banner .container a:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 35px;
+}
+
+.banner .kua {
+    position: absolute;
+    top: 130px;
+    right: 0;
+    width: 360px;
+    height: 454px;
+    background: white;
+    padding: 30px 30px 0;
+}
+
+#bn {
+    width: 360px;
+    height: 40px;
+}
+
+#bn li {
+    float: left;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+#bn li:hover {
+    color: red
+}
+
+#bn .active {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.banner .kua #layot {
+    width: 360px;
+    height: 384px;
+    padding-top: 30px;
+}
+
+#layot>li {
+    display: none;
+}
+
+#layot .erweima {
+    width: 360px;
+    height: 216px;
+    text-align: center;
+    line-height: 216px;
+}
+
+#layot .erweima img {
+    width: 200px;
+    height: 200px;
+}
+
+#layot form p {
+    margin-bottom: 15px;
+}
+
+#layot .rd {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#layot .rd span {
+    position: absolute;
+    right: 0;
+}
+
+#layot .rd span a {
+    color: black;
+}
+
+#layot p input {
+    width: 360px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid #e1e1e1 !important;
+    box-sizing: border-box;
+    text-indent: 1em;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+#layot .sub {
+    width: 360px;
+    height: 50px;
+}
+
+#layot .sub input {
+    width: 100%;
+    color: white;
+    line-height: 50px;
+    font-size: 19px;
+    text-align: center;
+    display: block;
+    background-color: #2899f7;
+    cursor: pointer;
+}
+
+#layot .zc {
+    width: 360px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+#layot .zc a {
+    color: #666666;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    width: 100%;
+    line-height: 50px;
+    font-size: 19px;
+    text-align: center;
+    display: block;
+}
+
+#layot .bottom p {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+#layot .bottom ul {
+    width: 260px;
+    height: 26px;
+    padding-left: 100px;
+}
+
+#layot .bottom ul li {
+    float: left;
+    margin-right: 11px;
+    text-align: center;
+}
+
+#layot .bottom ul li a img {
+    width: 26px;
+    height: 26px;
+}
+
+.footer {
+    width: 100%;
+    height: 80px;
+    background: #f7f7f7;
+    padding: 40px 0;
+}
+
+.footer p:nth-child(1) {
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.footer p:nth-child(1) a {
+    font-size: 12px;
+    color: #666666;
+}
+
+.footer p:nth-child(1) a:nth-child(2) {
+    padding-left: 25px;
+}
+
+.footer p:nth-child(1) a img {
+    width: 16px;
+    height: 16px;
+}
+
+.footer p:nth-child(2) {
+    height: 36px;
+    color: #9d9d9d;
+    font-size: 12px;
+    text-align: center;
+    line-height: 36px;
+}
