@@ -123,7 +123,7 @@ var fn = (function() {
 				for(var i = 0; i < $bAll.length; i++) {
 					console.log($bAll[i].innerHTML)
 					if($bAll[i].innerHTML != '验证成功') {
-						break;
+					   return false;
 					}
 				}
 				if(i == $bAll.length) {
