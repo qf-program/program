@@ -72,7 +72,7 @@ var fn = (function() {
 					}
 				}
 			}
-			
+
 			for(let i = 0; i < $inputAll.length; i++) {
 				console.log($inputAll);
 				$inputAll[i].onblur = function() {
@@ -94,38 +94,47 @@ var fn = (function() {
 					}
 				}
 			}
-               //验证密码
-              $psd.addEventListener('blur' , function(){
-              	 $repsd.onblur();
-              	 console.log(11111);
-              })
-						// 验证第二次密码
-				$repsd.onblur = function(){
-              	  var $b = this.parentNode.nextElementSibling;
-						if(this.value == $psd.value) {
-							$b.innerHTML = '验证成功';
-              }else{
-              	          $b.innerHTML = '密码不一致';
-              }	}
-				
-				// 当所有的b都为成功时触发
-				$sub2.addEventListener('onclick',function(){
-					var $b = document.querySelectorAll('b');
-					console.log($b);
-					console.log(1);
-				})
-				
-					$sub2.onclick = function() {
-						var $bAll = document.querySelectorAll('b');
-					         console.log($b.innerHTML);
-							
-				           $biao.style.display = 'none';
-				           $biao2.style.display = 'none';
-				           $biao3.style.display = 'block';
-				           $liAll[2].className = 'active';
-			     }
-						
-              
+			//验证密码
+			$psd.addEventListener('blur', function() {
+				$repsd.onblur();
+				console.log(11111);
+			})
+			// 验证第二次密码
+			$repsd.onblur = function() {
+				var $b = this.parentNode.nextElementSibling;
+				if(this.value == $psd.value) {
+					$b.innerHTML = '验证成功';
+				} else {
+					$b.innerHTML = '密码不一致';
+				}
+			}
+
+			// 当所有的b都为成功时触发
+			$sub2.addEventListener('onclick', function() {
+				var $b = document.querySelectorAll('b');
+				console.log($b);
+				console.log(1);
+			})
+
+			$sub2.onclick = function() {
+				var $bAll = document.querySelectorAll('b');
+				//						console.log(1);
+				//					         console.log($bAll[0].innerHTML);
+				for(var i = 0; i < $bAll.length; i++) {
+					console.log($bAll[i].innerHTML)
+					if($bAll[i].innerHTML != '验证成功') {
+						break;
+					}
+				}
+				if(i == $bAll.length) {
+					console.log(1)
+					$biao.style.display = 'none';
+					$biao2.style.display = 'none';
+					$biao3.style.display = 'block';
+					$liAll[2].className = 'active';
+				}
+			}
+
 			//  第一面的滑块
 			$lock.onmousedown = function(ev) {
 				ev = ev || window.event;
@@ -177,7 +186,6 @@ var fn = (function() {
 			}
 
 			//满足条件后跳转第三面
-		
 
 		}
 

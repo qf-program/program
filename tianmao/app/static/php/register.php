@@ -3,10 +3,10 @@
    $username = $_POST["username"];
 
    $password = $_POST["password"];
-   
-   $tel = $_POST["phone"];
+   $repassword = $_POST["repassword"];
+   $tel = $_POST["tel"];
    $coon = new mysqli('localhost', 'root','','person_info',3306); 
-   $insert_sql = "INSERT INTO person_info (username, password, tel) VALUES ('$username', '$password', '$tel' )";
+   $insert_sql = "INSERT INTO person_info (username, password,repassword, tel) VALUES ('$username', '$password','$repassword', '$tel' )";
 
    $coon->query("SET CHARACTER SET 'utf8'");//读库
    $coon->query("SET NAMES 'utf8'");//写库 
