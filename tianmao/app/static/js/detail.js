@@ -17,6 +17,16 @@ var big = (function(){
         // 获取移动的小黑块(放大镜)
         this.$filter = this.$showImage.querySelector('.filter');
         this.$banner = document.querySelector("#banner-wrap .banner");
+        // this.$xiemaAll = $('.xiema').children;
+        this.$xiema = document.querySelector('.xiema');
+        this.$xiemaAll = document.querySelectorAll('.xiema li');
+        this.$btn1 = document.querySelector('.btn1');
+        this.$btn2 = document.querySelector('.btn2');
+        this.$inp = document.querySelector('.inp');
+        console.log(this.$btn1, this.$inp, this.$btn2);
+        console.log(this.$xiemaAll[0]);
+        console.log(this.$xiemaAll.length);
+        
         // 给每一li添加索引， 方便获取
         for(var i = 0; i < this.$liAll.length; i++) {
           this.$liAll[i].index = i;
@@ -27,6 +37,7 @@ var big = (function(){
       },
       event: function() {
         var _this = this;
+        var t = 1; // 给数量赋值
         // 利用事件委托，给每一个li添加点击事件
         this.$ulbox.onclick = function(ev) {
           ev = ev || window.event;
@@ -37,6 +48,36 @@ var big = (function(){
             // 点击触发更换图片
             _this.showImage(target.parentNode.index)
           }
+        }
+        //鞋码的点击事件
+        this.$xiema.onclick = function(e){
+            // const _this = this;
+            console.log(_this.$xiemaAll.length);
+          e = e || window.event;
+          var target = e.target || e.srcElement;
+          if(target.nodeName === 'LI'){
+            console.log(target);
+            for(var i=0; i<_this.$xiemaAll.length; i++){
+              _this.$xiemaAll[i].className = ''; 
+            }
+            target.className = 'active';
+            
+          }
+        }
+
+        // 商品数量的点击事件
+        this.$btn1.onclick = function(){
+         
+          ++t;
+          _this.$inp.value = `${t}`;
+        }
+
+        this.$btn2.onclick = function(){
+          --t;
+          if( t<1){
+           t=1;
+         }
+          _this.$inp.value = `${t}`;
         }
 
         // 这里用onmouseenter： 子元素不触发事件
@@ -55,7 +96,7 @@ var big = (function(){
           ev = ev || window.event;
           // 计算小方块定点坐标
           var x = ev.clientX - _this.$banner.offsetLeft - _this.$filter.offsetWidth / 2;
-          var y = ev.clientY - this.offsetTop - _this.$filter.offsetHeight / 2;
+          var y = ev.clientY - _this.$banner.offsetTop  - _this.$filter.offsetHeight / 2;
     
           // 获取小方块移动的最大坐标
           var maxL = 420 -  _this.$filter.offsetWidth,
@@ -81,17 +122,19 @@ var big = (function(){
         }
       },
       showImage: function(index) {
-        console.log(index);
-        for(var i = 0; i < this.$liAll.length; i++) {
-          this.$liAll[i].className = ''
-        }
-        this.$liAll[index].className = 'active';
+        // console.log(index);
+        // for(var i = 0; i < this.$liAll.length; i++) {
+        //   this.$liAll[i].className = ''
+        // }
+        // this.$liAll[index].className = 'active';
         // 修改对应的图片地址
         var src = this.$liAll[index].querySelector('img').getAttribute('src');
         this.$showImage.querySelector('img').src = src.replace('small', 'big');
         this.$showBigImage.querySelector('img').src = src.replace('small', 'largest');
         console.log(src);
       }
+      
+
     }
     
   }())

@@ -164,24 +164,51 @@
 .banner{
 	width: 1150px;
 	height: 650px;
+	margin-top: 20px;
 	position: relative;
 }
 .banner .banner-l{
 	width: 966px;
 	height: 100%;
+	float: left;
 }
-.box .show-Image{
+/* .box .show-image{
 	width: 450px;
 	height: 450px;
 	overflow: hidden;
+	float: left;
+} */
+.box .show-image{
+	width: 420px;
+	float: left;
 }
 .box{
-	margin-top: 20px;
+	/* margin-top: 20px; */
+	height: 650px;
+	width: 422px;
+	float: left;
 	/* position: relative; */
+}
+.box p {
+	width: 100%;
+	font-size: 12px;
+	color: #999;
+	margin-top: 40px;
+	float: left;
+	padding-left: 15px;
+	box-sizing: border-box;
+
+}
+.box p span{
+	margin-right: 20px;
+}
+.box p span:nth-child(3){
+	float: right;
 }
 .img-box{
 	width: 420px;
 	height: 102px;
+	float: left;
 	
 }
 .img-box li{
@@ -189,8 +216,8 @@
 	margin-right: 3px;
 	border: 1px solid #eee;
 }
-.active{
-	border: 1px solid #000;
+.banner .banner-l .xinxi .xiema .active{
+	border: 2px solid red;
 }
 .img-box li img{
 	width: 100px;
@@ -201,11 +228,13 @@
 	height: 420px;
 	position: absolute;
 	left: 440px;
-	top:0px;
+	top:20px;
 	border: 1px solid #eee;
 	overflow: hidden;
 	margin-left: 20px;
-	/* display: none; */
+	display: none;
+	z-index: 9;
+	
 }
 .box .show-big-image img{
 	position: absolute;
@@ -220,3 +249,316 @@
 	cursor: move;
 	display: none;
   }
+
+  .banner .banner-l .xinxi{
+	  width: 542px;
+	  height: 630px;
+	  float: left;
+	  padding: 0 20px;
+	  box-sizing: border-box;
+	  border-right: 1px solid #eee;
+  } 
+  .banner .banner-l .xinxi h2{
+	  font-size: 16px;
+	  font-weight: 800;
+	  color: #000;
+  }
+  .banner .banner-l .xinxi h3{
+	font-size: 14px;
+	font-weight: 400;
+	color: red;
+}
+.banner .banner-l .xinxi .price{
+	width: 500px;
+	height: 40px;
+	background: url(../images/price.jpg);
+	margin-top: 18px;
+}
+.banner .banner-l .xinxi h4{
+	font-size: 12px;
+	color: #000;
+	margin-top: 15px;
+}
+.banner .banner-l .xinxi span{
+	font-size: 12px;
+	color: #999;
+	margin-right: 18px;
+}
+.banner .banner-l .xinxi .pingjia{
+	display: flex;
+	justify-content: space-around;
+	border-top: 1px dashed #999;
+	border-bottom: 1px dashed #999;
+	margin-top: 20px;
+	height: 34px;
+	line-height: 34px;
+	color: #999;
+}
+.banner .banner-l .xinxi .pingjia li{
+	 font-size: 12px;
+	 color: #999;
+}
+.banner .banner-l .xinxi .pingjia li span{
+	font-size: 12px;
+	color: red;
+	font-weight: 700;
+	margin-left: 5px;
+}
+.banner .banner-l .xinxi .title{
+	width: 75px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	float: left;
+
+}
+.banner .banner-l .xinxi .title li{
+	font-size: 12px;
+	color: #999;
+	
+}
+.banner .banner-l .xinxi .xiema{
+	width: 390px;
+	height: 80px;
+	float: left;
+	margin-top: 10px;
+}
+.banner .banner-l .xinxi .xiema li{
+	float: left;
+	margin-right: 10px;
+	border: 1px solid #999;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.banner .banner-l .xinxi .color{
+	width: 92px;
+	height: 40px;
+	border: 1px solid #999;
+	float: left;
+	font-size: 12px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	margin-right: 300px;
+	margin-bottom: 20px;
+}
+.banner .banner-l .xinxi .color:hover{
+	border: 2px solid red;
+}
+.banner .banner-l .xinxi .count{
+	width: 65px;
+	height: 35px;
+	position: relative;
+	float: left;
+	margin-right: 300px;
+}
+.banner .banner-l .xinxi .count .inp{
+	width: 35px;
+	height: 100%;
+	margin-top: -2px;
+	border: 
+}
+.banner .banner-l .xinxi .count .btn1{
+	width: 17px;
+	height: 13px;
+	background: #fff;
+	border: 1px solid #999;
+	line-height: 13px;
+	position: absolute;
+	top: 2px;
+	right: 0;
+	outline: none;
+}
+.banner .banner-l .xinxi .count .btn1 i{
+	font-size: 12px;
+	color: #999;
+	
+}
+.banner .banner-l .xinxi .count .btn2{
+	width: 17px;
+	height: 13px;
+	background: #fff;
+	border: 1px solid #999;
+	line-height: 13px;
+	position: absolute;
+	bottom: 2px;
+	right: 0;
+	outline: none;
+}
+.banner .banner-l .xinxi .count .btn2 i{
+	font-size: 12px;
+	color: #999;
+	
+}
+.banner .banner-l .xinxi .buy{
+	width: 180px;
+	height: 40px;
+	border: 1px solid red;
+	background: #FFEDED;
+	color: #FF0036;
+	margin-top: 24px;
+}
+.banner .banner-l .xinxi .car{
+	width: 180px;
+	height: 40px;
+	border: 1px solid red;
+	background: red;
+	color: #fff;
+	margin-top: 24px;
+}
+.banner .banner-l .xinxi p {
+	font-size: 12px;
+	color: #999;
+	margin-top: 45px;
+}
+.banner .banner-l .xinxi p  b{
+	font-size: 12px;
+	margin-right: 35px;
+	color: #666;
+}
+.banner .banner-l .xinxi p  b:nth-child(4){
+	float: right;
+}
+.banner .banner-r{
+	width: 180px;
+	height: 100%;
+	float: right;
+}
+.banner .banner-r a{
+	display: block;
+	width: 142px;
+	height: 542px;
+	background: url(../images/匡威天猫_03.jpg);
+}
+
+#quanyi-wrap{
+	height: 378px;
+	border-top: 1px solid #999;
+}
+#quanyi-wrap .quanyi{
+	height: 378px;
+	border-bottom: 1px solid #eee;
+}
+#quanyi-wrap .quanyi  a{
+	display: block;
+	width: 1280px;
+	height: 166px;
+	background: url(../images/img_02.jpg);
+}
+#quanyi-wrap .quanyi .quanyi-b{
+	height: 212px;
+	padding-left: 80px;
+	padding-top: 25px;
+	box-sizing: border-box;
+}
+#quanyi-wrap .quanyi .quanyi-b dl{
+	float: left;
+	margin-right: 160px;
+}
+#quanyi-wrap .quanyi .quanyi-b dl dt{
+	font-size: 14px;
+	font-weight: 700;
+	color: #646464;
+	margin-bottom: 10px;
+}
+#quanyi-wrap .quanyi .quanyi-b dl dd{
+	font-size: 12px;
+	font-weight: 400;
+	color: #999;
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima{
+	width: 102px;
+	height: 130px;
+	float: left;
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima span{
+	font-weight: 700;
+	font-size: 14px;
+	color: #646464;
+	
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima a{
+	display: block;
+	width: 102px;
+	height: 101px;
+	background: url(../images/img_05.jpg);
+	margin-top: 10px;
+}
+
+
+/* 尾部 */
+#footer-wrap{
+	height: 220px;
+	border-top: 2px solid #FF0036;
+	background: #000;
+	position: relative;
+	}
+	.footer{
+		height: 220px;
+		/* border-top: 2px solid #FF0036; */
+	}
+	.footer .tianmao{
+		width: 72px;
+		height: 23px;
+		background: url(../images/img_03.jpg);
+		position: absolute;
+		top: -25px;
+		left: 200px;
+	}
+	.footer li {
+		float: left;
+	}
+	.footer1{
+		height: 34px;
+		line-height: 34px;
+	}
+	.footer2{
+		float: left;
+		height: 34px;
+		line-height: 34px;
+		margin-bottom: 10px;
+	}
+	.footer li a{
+		margin: 0 5px;
+		font-size: 12px;
+		color: #fff;
+		
+	}
+	
+	.footer li a:hover{
+		text-decoration: underline;
+	}
+	.footer3{
+		float: left;
+	  
+	}
+	.footer3 li{
+		float: left;
+		 margin-right: 50px;
+	}
+	.footer3 li span{
+		font-size: 12px;
+		color: #666;
+	}
+	.footer3 li a{
+		font-size: 10px;
+		color: #999999;
+	}
+	.footer3 li i{
+		color: #747774;
+		font-size: 12px;
+	}
+	.footer .banquan{
+		float: left;
+	}
+	.footer .banquan span{
+		color: #747774;
+		font-size: 12px;
+	}
+	
