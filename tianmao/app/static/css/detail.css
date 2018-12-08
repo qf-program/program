@@ -1,0 +1,222 @@
+.container{
+	width: 1234px;
+	margin: 0 auto;
+}
+#header-wrap{
+	
+	height: 32px;
+	border: 1px solid #e5e5e5;
+	background: #f2f2f2;
+}
+.header{
+	
+	height: 32px;
+	line-height: 32px;
+	background: #f2f2f2;
+}
+.header .login{
+	float: left;
+}
+
+.header .login .wel{
+	font-size: 12px;
+	color: #999999;
+}
+.header .login a{
+	font-size: 12px;
+	color: #999999;
+}
+.header .login a:hover{
+	color: red;
+}
+.header ul {
+	float: right;
+}
+.header ul li{
+	float: left;
+	margin-right: 16px;
+	font-size: 12px;
+	color: #999999;
+}
+.header ul li a{
+	font-size: 12px;
+	color: #999999;
+}
+.header ul li a:hover{
+	color: red;
+	/*text-decoration: underline;*/
+}
+.header ul li .line{
+	margin-right: 10px;
+}
+.header ul li a i{
+	font-size: 8px;
+	margin-left: 2px;
+	
+}
+.header ul li span{
+	color: red;
+	margin-right: 3px;
+}
+
+#top-wrap{
+	height: 84px;
+}
+#top-wrap .top{
+	 height: 84px;
+}
+#top-wrap .top .logo{
+	float: left;
+}
+#top-wrap .top .logo a{
+	display: inline-block;
+	width: 533px;
+	height: 80px;
+	background: url(../images/xiangqing_03.jpg);
+}
+.top .search{
+	float: left;
+	/*width: 299px;*/
+	margin-left: 50px;
+	margin-top: 10px; 
+	box-sizing: border-box;
+	
+}
+.top .search .txt{
+	width: 391px;
+	height: 40px;
+	border: 2px solid #ff0036;
+	border-right: 0;
+	padding-left: 5px;
+	float: left;
+	box-sizing: border-box;
+	
+}
+.top .search .sub{
+	width: 100px;
+	height: 40px;
+	background: #ff0036;
+	border: 0;
+	margin-left: -5px;
+	margin-right:6px;
+	/*margin-top: 1px;*/
+	color: #fff;
+	float: left;
+	box-sizing: border-box;
+
+}
+
+.top .search .resou a{
+	display: inline-block;
+	width: 60px;
+	height: 14px;
+	line-height: 14px;
+	border-right: 1px solid #999;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+}
+.top .search .resou a:hover{
+	font-size: 12px;
+	color: #ff0036;
+}
+
+#nav-wrap{
+	height: 80px;
+	background: #000;
+}
+#nav-wrap .nav{
+	height: 80px;
+	background: #000;
+	position: relative;
+}
+
+
+#nav-wrap .nav  a{
+	display: block;
+	width: 600px;
+	height: 80px;
+	background: url(../images/img1.jpg);
+	margin-left: 50px;
+}
+#nav-wrap .nav .sousuo1{
+	width: 300px;
+	height: 30px;
+	position: absolute;
+	background: #fff;
+	right: 100px;
+	top: 20px;
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+#nav-wrap .nav .icon-sousuo{
+	z-index: 9;
+	color: #000;
+	position: absolute;
+	right: 380px;
+	top: 28px;
+}
+#nav1-wrap{
+	width: 100%;
+	height: 50px;
+	background: url(../images/xiangqing_06.jpg);
+}
+.banner{
+	width: 1150px;
+	height: 650px;
+	position: relative;
+}
+.banner .banner-l{
+	width: 966px;
+	height: 100%;
+}
+.box .show-Image{
+	width: 450px;
+	height: 450px;
+	overflow: hidden;
+}
+.box{
+	margin-top: 20px;
+	/* position: relative; */
+}
+.img-box{
+	width: 420px;
+	height: 102px;
+	
+}
+.img-box li{
+	float: left;
+	margin-right: 3px;
+	border: 1px solid #eee;
+}
+.active{
+	border: 1px solid #000;
+}
+.img-box li img{
+	width: 100px;
+	height: 100px;
+}
+.box .show-big-image{
+	width: 420px;
+	height: 420px;
+	position: absolute;
+	left: 440px;
+	top:0px;
+	border: 1px solid #eee;
+	overflow: hidden;
+	margin-left: 20px;
+	/* display: none; */
+}
+.box .show-big-image img{
+	position: absolute;
+}
+.filter {
+	position: absolute;
+	left: 0px;
+	top:0;
+	width: 150px;
+	height: 150px;
+	background: rgba(0,0,0,0.6);
+	cursor: move;
+	display: none;
+  }

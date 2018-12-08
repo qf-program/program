@@ -18,7 +18,9 @@
    if($row){
    	  echo  "<script>";
    	  echo 	"alert('注册成功')";
-   	 echo  "</script>";
+       
+          echo  "</script>";  
+        
    }
        else{
        	 echo  "<script> alert('注册失败') </script>";
