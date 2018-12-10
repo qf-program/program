@@ -37,7 +37,7 @@ var big = (function(){
       },
       event: function() {
         var _this = this;
-        var t = 1; // 给数量赋值
+        var t = this.$inp.value || 1; // 给数量赋值
         // 利用事件委托，给每一个li添加点击事件
         this.$ulbox.onclick = function(ev) {
           ev = ev || window.event;
@@ -67,12 +67,13 @@ var big = (function(){
 
         // 商品数量的点击事件
         this.$btn1.onclick = function(){
-         
+          t = _this.$inp.value || 1;
           ++t;
           _this.$inp.value = `${t}`;
         }
 
         this.$btn2.onclick = function(){
+          t = _this.$inp.value || 1;
           --t;
           if( t<1){
            t=1;
@@ -95,8 +96,8 @@ var big = (function(){
         this.$showImage.onmousemove = function(ev) {
           ev = ev || window.event;
           // 计算小方块定点坐标
-          var x = ev.clientX - _this.$banner.offsetLeft - _this.$filter.offsetWidth / 2;
-          var y = ev.clientY - _this.$banner.offsetTop  - _this.$filter.offsetHeight / 2;
+          var x = ev.pageX - _this.$banner.offsetLeft - _this.$filter.offsetWidth / 2;
+          var y = ev.pageY - _this.$banner.offsetTop  - _this.$filter.offsetHeight / 2;
     
           // 获取小方块移动的最大坐标
           var maxL = 420 -  _this.$filter.offsetWidth,
