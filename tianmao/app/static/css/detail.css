@@ -217,7 +217,7 @@
 	border: 1px solid #eee;
 }
 .banner .banner-l .xinxi .xiema .active{
-	border: 2px solid red;
+	border: 1px solid red;
 }
 .img-box li img{
 	width: 100px;
@@ -349,7 +349,7 @@
 	margin-bottom: 20px;
 }
 .banner .banner-l .xinxi .color:hover{
-	border: 2px solid red;
+	border: 1px solid red;
 }
 .banner .banner-l .xinxi .count{
 	width: 65px;

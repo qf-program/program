@@ -211,13 +211,13 @@ input{
 	position: relative;
 }
 .swiper-container {
-    width: 1520px;
+    width: 1688px;
     height: 700px;
 } 
 
 .swiper-container .swiper-wrapper img{
-	width: 100%;
-	height: 100%;
+	width: 1688px;
+	height: 700px;
 }
 
 
@@ -232,7 +232,7 @@ input{
 	position: absolute;
 	z-index: 9;
 	top: 0;
-	left: 142px;
+	left: 227px;
 }
 #banner-l li{
 	height: 31px;
@@ -272,6 +272,12 @@ input{
 	font-weight: 700;
 	color: #333;
 }
+/* 改变span样式 */
+/* #banner-l li span{
+	font-size: 16px;
+	font-weight: 700;
+	color: #333;
+} */
 #banner-l li:nth-child(6) > ul >li b{
   display: inline-block;
   width: 500px;
@@ -346,6 +352,20 @@ input{
 	width: 121px;
 	height: 108px;
 	background: url(../images/images_07.jpg);
+}
+.banxin .block2 ul li a:hover{
+	/* background: #000; */
+	opacity: 0.5;
+}
+.banxin .block2 ul li:nth-child(even) a:hover{
+	/* background: #000; */
+	opacity: 0.3;
+}
+.banxin .block2 ul li:nth-child(even) a{
+	display: block;
+	width: 121px;
+	height: 108px;
+	background: url(../images/niujin.jpg);
 }
 .banxin .block3{
 	height: 650px;
@@ -433,6 +453,12 @@ input{
 		 margin-left: 10px;
 		 margin-bottom: 10px;
   }
+   
+  /* 边框hover */
+  .banxin  .block3-b .block3-b-r .b01 li a:hover{
+	border: 1px solid red;
+	opacity: 0.8;
+  }
   .banxin .block3 .block3-b .block3-b-r .b01 li:nth-child(3),li:nth-child(4){
 	  margin-left: 0px;
   }
@@ -441,4 +467,396 @@ input{
 	width: 237px;
 	height: 302px;
 	background: url(../images/images_20.jpg);
+}
+
+
+
+
+.banxin .block4{
+	height: 650px;
+	margin-top: 25px;
+}
+.banxin .block4 .title{
+	height: 30px;
+
+}
+.banxin .block4 .title span{
+	display: inline-block;
+	width: 214px;
+	height: 25px;
+	background: url(../images/img_05_03.jpg);
+}
+.banxin .block4 .title p{
+	float: right;
+}
+.banxin .block4 .title p a{
+	/* display: inline-block; */
+	margin-right: 15px;
+	font-size: 13px;
+	color: #000000;
+}
+.banxin .block4 .block3-b{
+	height: 650px;
+}
+.banxin .block4 .block3-b .block3-b-l{
+	width: 235px;
+	height: 618px;
+	float: left;
+}
+.banxin .block4 .block3-b .block3-b-l a{
+	display: block;
+	width: 235px;
+	height: 618px;
+	background: url(../images/img_05_06.jpg);
+}
+.banxin .block4 .block3-b .block3-b-r{
+	width: 980px;
+	height: 618px;
+	float: right;
+}
+  .banxin .block4 .block3-b .block3-b-r .b01 li{
+		 width: 235px;
+		 height: 302px;
+		 float: left;
+		 margin-left: 10px;
+		 margin-bottom: 10px;
+  }
+ 
+  .banxin .block4 .block3-b .block3-b-r .b01 li a{
+	display: block; 
+	width: 237px;
+	height: 302px;
+	background: url(../images/img_05_08.jpg);
+}
+.banxin .block8 {
+	height: 93px;
+	width: 1229px;
+	margin-top: 30px;
+}
+.banxin .block8 a{
+	display: block;
+	height: 93px;
+	width: 1235px;
+	background: url(../images/img_06_06.jpg);
+}
+
+
+
+
+.banxin .block6{
+	height: 650px;
+	margin-top: 25px;
+}
+.banxin .block6 .title{
+	height: 30px;
+
+}
+.banxin .block6 .title span{
+	display: inline-block;
+	width: 242px;
+	height: 25px;
+	background: url(../images/img_05_04.jpg);
+}
+.banxin .block6 .title p{
+	float: right;
+}
+.banxin .block6 .title p a{
+	/* display: inline-block; */
+	margin-right: 15px;
+	font-size: 13px;
+	color: #000000;
+}
+.banxin .block6 .block3-b{
+	height: 650px;
+}
+.banxin .block6 .block3-b .block3-b-l{
+	width: 235px;
+	height: 618px;
+	float: left;
+}
+.banxin .block6 .block3-b .block3-b-l a{
+	display: block;
+	width: 235px;
+	height: 618px;
+	background: url(../images/img_05_15.jpg);
+}
+.banxin .block6 .block3-b .block3-b-r{
+	width: 980px;
+	height: 618px;
+	float: right;
+}
+  .banxin .block6 .block3-b .block3-b-r .b01 li{
+		 width: 235px;
+		 height: 302px;
+		 float: left;
+		 margin-left: 10px;
+		 margin-bottom: 10px;
+  }
+ 
+  .banxin .block6 .block3-b .block3-b-r .b01 li a{
+	display: block; 
+	width: 237px;
+	height: 302px;
+	background: url(../images/img_05_18.jpg);
+}
+
+
+
+
+
+.banxin .block7{
+	height: 650px;
+	margin-top: 25px;
+}
+.banxin .block7 .title{
+	height: 30px;
+
+}
+.banxin .block7 .title span{
+	display: inline-block;
+	width: 198px;
+	height: 25px;
+	background: url(../images/img_06_03.jpg);
+}
+.banxin .block7 .title p{
+	float: right;
+}
+.banxin .block7 .title p a{
+	/* display: inline-block; */
+	margin-right: 15px;
+	font-size: 13px;
+	color: #000000;
+}
+.banxin .block7 .block3-b{
+	height: 650px;
+}
+.banxin .block7 .block3-b .block3-b-l{
+	width: 235px;
+	height: 618px;
+	float: left;
+}
+.banxin .block7 .block3-b .block3-b-l a{
+	display: block;
+	width: 235px;
+	height: 618px;
+	background: url(../images/img_05_22.jpg);
+}
+.banxin .block7 .block3-b .block3-b-r{
+	width: 980px;
+	height: 618px;
+	float: right;
+}
+  .banxin .block7 .block3-b .block3-b-r .b01 li{
+		 width: 235px;
+		 height: 302px;
+		 float: left;
+		 margin-left: 10px;
+		 margin-bottom: 10px;
+  }
+ 
+  .banxin .block7 .block3-b .block3-b-r .b01 li a{
+	display: block; 
+	width: 237px;
+	height: 302px;
+	background: url(../images/img_05_24.jpg);
+}
+
+.banxin .block8 {
+	height: 87px;
+	width: 1229px;
+	margin-top: 30px;
+}
+.banxin .block8 a{
+	display: block;
+	height: 87px;
+	width: 1235px;
+	background: url(../images/img_05_12.jpg);
+}
+
+
+
+.banxin .block9{
+	height: 650px;
+	margin-top: 25px;
+}
+.banxin .block9 .title{
+	height: 30px;
+
+}
+.banxin .block9 .title span{
+	display: inline-block;
+	width: 244px;
+	height: 25px;
+	background: url(../images/img_06_09.jpg);
+}
+.banxin .block9 .title p{
+	float: right;
+}
+.banxin .block9 .title p a{
+	/* display: inline-block; */
+	margin-right: 15px;
+	font-size: 13px;
+	color: #000000;
+}
+.banxin .block9 .block3-b{
+	height: 650px;
+}
+.banxin .block9 .block3-b .block3-b-l{
+	width: 235px;
+	height: 618px;
+	float: left;
+}
+.banxin .block9 .block3-b .block3-b-l a{
+	display: block;
+	width: 235px;
+	height: 618px;
+	background: url(../images/img_06_12.jpg);
+}
+.banxin .block9 .block3-b .block3-b-r{
+	width: 980px;
+	height: 618px;
+	float: right;
+}
+  .banxin .block9 .block3-b .block3-b-r .b01 li{
+		 width: 235px;
+		 height: 302px;
+		 float: left;
+		 margin-left: 10px;
+		 margin-bottom: 10px;
+  }
+ 
+  .banxin .block9 .block3-b .block3-b-r .b01 li a{
+	display: block; 
+	width: 237px;
+	height: 302px;
+	background: url(../images/img_06_15.jpg);
+}
+
+
+
+.banxin .block10{
+	height: 650px;
+	margin-top: 25px;
+}
+.banxin .block10 .title{
+	height: 30px;
+
+}
+.banxin .block10 .title span{
+	display: inline-block;
+	width: 149px;
+	height: 22px;
+	background: url(../images/img_06_19.jpg);
+}
+.banxin .block10 .title p{
+	float: right;
+}
+.banxin .block10 .title p a{
+	/* display: inline-block; */
+	margin-right: 15px;
+	font-size: 13px;
+	color: #000000;
+}
+.banxin .block10 .block3-b{
+	height: 650px;
+}
+.banxin .block10 .block3-b .block3-b-l{
+	width: 235px;
+	height: 618px;
+	float: left;
+}
+.banxin .block10 .block3-b .block3-b-l a{
+	display: block;
+	width: 235px;
+	height: 618px;
+	background: url(../images/img_06_22.jpg);
+}
+.banxin .block10 .block3-b .block3-b-r{
+	width: 980px;
+	height: 618px;
+	float: right;
+}
+  .banxin .block10 .block3-b .block3-b-r .b01 li{
+		 width: 235px;
+		 height: 302px;
+		 float: left;
+		 margin-left: 10px;
+		 margin-bottom: 10px;
+  }
+ 
+  .banxin .block10 .block3-b .block3-b-r .b01 li a{
+	display: block; 
+	width: 237px;
+	height: 302px;
+	background: url(../images/img_06_24.jpg);
+}
+
+.banxin .block11 {
+	height: 87px;
+	width: 1229px;
+	margin-top: 30px;
+}
+.banxin .block11 a{
+	display: block;
+	height: 87px;
+	width: 1235px;
+	background: url(../images/img_06_28.jpg);
+}
+
+
+.banxin .block12{
+	height: 650px;
+	margin-top: 25px;
+}
+.banxin .block12 .title{
+	height: 30px;
+
+}
+.banxin .block12 .title span{
+	display: inline-block;
+	width: 297px;
+	height: 22px;
+	background: url(../images/img_06_30.jpg);
+}
+.banxin .block12 .title p{
+	float: right;
+}
+.banxin .block12 .title p a{
+	/* display: inline-block; */
+	margin-right: 15px;
+	font-size: 13px;
+	color: #000000;
+}
+.banxin .block12 .block3-b{
+	height: 650px;
+}
+.banxin .block12 .block3-b .block3-b-l{
+	width: 235px;
+	height: 618px;
+	float: left;
+}
+.banxin .block12 .block3-b .block3-b-l a{
+	display: block;
+	width: 235px;
+	height: 618px;
+	background: url(../images/img_06_33.jpg);
+}
+.banxin .block12 .block3-b .block3-b-r{
+	width: 980px;
+	height: 618px;
+	float: right;
+}
+  .banxin .block12 .block3-b .block3-b-r .b01 li{
+		 width: 235px;
+		 height: 302px;
+		 float: left;
+		 margin-left: 10px;
+		 margin-bottom: 10px;
+  }
+ 
+  .banxin .block12 .block3-b .block3-b-r .b01 li a{
+	display: block; 
+	width: 237px;
+	height: 302px;
+	background: url(../images/img_06_35.jpg);
 }

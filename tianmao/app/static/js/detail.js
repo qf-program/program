@@ -21,6 +21,7 @@ var big = (function () {
       this.$xiema = document.querySelector('.xiema');
       this.$xiemaAll = document.querySelectorAll('.xiema li');
       this.$btn1 = document.querySelector('.btn1');
+      console.log(this.$btn1)
       this.$btn2 = document.querySelector('.btn2');
       this.$inp = document.querySelector('.inp');
       // console.log(this.$btn1, this.$inp, this.$btn2);
@@ -37,7 +38,7 @@ var big = (function () {
     },
     event: function () {
       var _this = this;
-      var t = 1; // 给数量赋值
+      var t = this.$inp.value || 1; // 给数量赋值
       // 利用事件委托，给每一个li添加点击事件
       this.$ulbox.onclick = function (ev) {
         ev = ev || window.event;
@@ -62,24 +63,29 @@ var big = (function () {
           }
           target.className = 'active';
 
+          // 商品数量的点击事件
         }
+
       }
 
-      // 商品数量的点击事件
       this.$btn1.onclick = function () {
-
+        console.log(this.$btn1);
+        console.log(1);
+        t = _this.$inp.value || 1;
         ++t;
         _this.$inp.value = `${t}`;
       }
+      // 商品数量的点击事件
+
 
       this.$btn2.onclick = function () {
+        t = _this.$inp.value || 1;
         --t;
         if (t < 1) {
           t = 1;
         }
         _this.$inp.value = `${t}`;
       }
-
       // 这里用onmouseenter： 子元素不触发事件
       this.$showImage.onmouseenter = function () {
         // 放大镜显示
@@ -95,8 +101,8 @@ var big = (function () {
       this.$showImage.onmousemove = function (ev) {
         ev = ev || window.event;
         // 计算小方块定点坐标
-        var x = ev.clientX - _this.$banner.offsetLeft - _this.$filter.offsetWidth / 2;
-        var y = ev.clientY - _this.$banner.offsetTop - _this.$filter.offsetHeight / 2;
+        var x = ev.pageX - _this.$banner.offsetLeft - _this.$filter.offsetWidth / 2;
+        var y = ev.pageY - _this.$banner.offsetTop - _this.$filter.offsetHeight / 2;
 
         // 获取小方块移动的最大坐标
         var maxL = 420 - _this.$filter.offsetWidth,
@@ -133,9 +139,6 @@ var big = (function () {
       this.$showBigImage.querySelector('img').src = src.replace('small', 'largest');
       console.log(src);
     }
-
-
   }
-
 }())
 big.init();
