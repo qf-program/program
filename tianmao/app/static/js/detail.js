@@ -130,8 +130,8 @@ var big = (function(){
         // this.$liAll[index].className = 'active';
         // 修改对应的图片地址
         var src = this.$liAll[index].querySelector('img').getAttribute('src');
-        this.$showImage.querySelector('img').src = src.replace('small', 'big');
-        this.$showBigImage.querySelector('img').src = src.replace('small', 'largest');
+        this.$showImage.querySelector('img').src = src;
+        this.$showBigImage.querySelector('img').src = src;
         console.log(src);
       }
       
