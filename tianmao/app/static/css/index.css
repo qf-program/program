@@ -1,6 +1,6 @@
 body, html{
 	font: 12px "微软雅黑" Arial;
-	background: #fff;
+	background: #f5f5f5;
 }
 li{
 	list-style: none;
@@ -96,6 +96,7 @@ input{
 
 #top-wrap{
 	height: 132px;
+	background: #fff;
 }
 .top{
 	height: 132px;
@@ -147,10 +148,7 @@ input{
 	box-sizing: border-box;
 
 }
-.search .resou{
-	/*margin-top: 10px;*/
-	/*text-align: center;*/
-}
+
 .search .resou a{
 	display: inline-block;
 	width: 60px;
@@ -172,6 +170,7 @@ input{
 }
 .nav{
 	height: 36px;
+	border-bottom: 3px solid red;
 }
 .nav .nav-l{
 	width: 200px;
@@ -211,14 +210,17 @@ input{
 #banner{
 	position: relative;
 }
-/*#banner #fenyeqi{
-	width: 15px;
-	height: 4px;
-	position: absolute;
-	bottom: 0;
-	left: 40%;
-	background: #000;
-}*/
+.swiper-container {
+    width: 1520px;
+    height: 700px;
+} 
+
+.swiper-container .swiper-wrapper img{
+	width: 100%;
+	height: 100%;
+}
+
+
 
 #banner-l{
 	display: flex;
@@ -227,16 +229,66 @@ input{
 	width: 200px;
 	height: 99%;
 	background: rgba(0,0,0,0.5);
-	/*padding-left: 20px;*/
-	/*box-sizing: border-box;*/
 	position: absolute;
 	z-index: 9;
 	top: 0;
+	left: 142px;
 }
 #banner-l li{
 	height: 31px;
 	line-height: 31px;
 }
+/* 二级菜单开始 */
+#banner-l li:nth-child(6) > ul{
+	width: 900px;
+	height: 561px;
+	background: #fff;
+	position: absolute;
+	left: 200px;
+	top: 0;
+	padding-left: 20px;
+	padding-top: 15px;
+	box-sizing: border-box;
+	display: none;
+}
+#banner-l li:nth-child(6):hover >ul{
+	display: block;
+
+}
+#banner-l li:nth-child(6) > ul >li{
+   height: 50px;
+}
+#banner-l li:nth-child(6) > ul >.tupian a{
+	display: block;
+	width: 261px;
+	height: 561px;
+	background: url(../images/img_09_03.jpg);
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#banner-l li:nth-child(6) > ul >li span{
+	font-size: 16px;
+	font-weight: 700;
+	color: #333;
+}
+#banner-l li:nth-child(6) > ul >li b{
+  display: inline-block;
+  width: 500px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px dashed #eee;
+}
+#banner-l li:nth-child(6) > ul >li b a{
+	display: inline;
+	color: #999;
+	font-weight: normal;
+	font-size: 14px;
+}
+#banner-l li:nth-child(6) > ul >li b a:hover{
+	color: blue;
+}
+
 #banner-l li:hover {
 	background: #fff;
 	color: blue;
@@ -253,4 +305,140 @@ input{
 	margin-left: 20px;
 }
 
-	 
+
+/* 模块 */
+
+#banxin-wrap{
+	height: 2000px;
+}
+
+.banxin{
+	height: 2000px;
+}
+.banxin .block1 {
+	width: 1229px;
+	height: 370px;
+	margin-top: 30px;
+}
+.banxin .block1 a{
+	display: block;
+	width: 1229px;
+	height: 370px;
+	background: url(../images/images_03.jpg);
+}
+.banxin .block2 {
+	width: 1229px;
+	height: 330px;
+	margin-top: 30px;
+} 
+.banxin .block2 ul{
+	width: 1229px;
+	height: 330px;
+}
+.banxin .block2 ul li{
+	float: left;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	box-sizing: border-box;
+}
+.banxin .block2 ul li a{
+	display: block;
+	width: 121px;
+	height: 108px;
+	background: url(../images/images_07.jpg);
+}
+.banxin .block3{
+	height: 650px;
+	margin-top: 25px;
+}
+.banxin .block3 .title{
+	height: 30px;
+
+}
+.banxin .block3 .title span{
+	display: inline-block;
+	width: 214px;
+	height: 25px;
+	background: url(../images/images02.jpg);
+}
+.banxin .block3 .title p{
+	float: right;
+}
+.banxin .block3 .title p a{
+	/* display: inline-block; */
+	margin-right: 15px;
+	font-size: 13px;
+	color: #000000;
+}
+.banxin .block3 .block3-b{
+	height: 650px;
+}
+.banxin .block3 .block3-b .block3-b-l{
+	width: 235px;
+	height: 618px;
+	float: left;
+}
+.banxin .block3 .block3-b .block3-b-l a{
+	display: block;
+	width: 235px;
+	height: 618px;
+	background: url(../images/images_13.jpg);
+}
+.banxin .block3 .block3-b .block3-b-r{
+	width: 980px;
+	height: 618px;
+	float: right;
+}
+.banxin .block3 .block3-b .block3-b-r .paper{
+	width: 480px;
+	height: 300px;
+	float: left;
+	margin-bottom: 10px;
+}
+.banxin .block3 .block3-b .block3-b-r .paper span{
+	display: block;
+	float: left;
+	width: 240px;
+	height: 50px;
+	 background: #F1F1F1;
+	 color: #000000;
+	 text-align: center;
+	 line-height: 50px;
+	 cursor: pointer;
+}
+.banxin .block3 .block3-b .block3-b-r .paper span:hover{
+	background: #00B262;
+	color: #fff;
+}
+.banxin .block3 .block3-b .block3-b-r .paper span:nth-child(2){
+  background: #F1F1F1;
+}
+.banxin .block3 .block3-b .block3-b-r .paper span:nth-child(2):hover{
+	background: #00B262;
+	color: #fff;
+
+  }
+  .banxin .block3 .block3-b .block3-b-r .paper .paper1{
+	   display: block;
+	   width: 480px;
+	   height: 250px;
+	   background: url(../images/images_16.jpg);
+	   background-size: 100%;
+	   margin-top: 50px;
+  }
+  .banxin .block3 .block3-b .block3-b-r .b01 li{
+		 width: 237px;
+		 height: 302px;
+		 float: left;
+		 margin-left: 10px;
+		 margin-bottom: 10px;
+  }
+  .banxin .block3 .block3-b .block3-b-r .b01 li:nth-child(3),li:nth-child(4){
+	  margin-left: 0px;
+  }
+  .banxin .block3 .block3-b .block3-b-r .b01 li a{
+	display: block; 
+	width: 237px;
+	height: 302px;
+	background: url(../images/images_20.jpg);
+}
