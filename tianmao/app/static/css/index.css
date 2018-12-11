@@ -1,6 +1,7 @@
 body, html{
 	font: 12px "微软雅黑" Arial;
 	background: #f5f5f5;
+	position: relative;
 }
 li{
 	list-style: none;
@@ -211,12 +212,12 @@ input{
 	position: relative;
 }
 .swiper-container {
-    width: 1688px;
+    width: 1519px;
     height: 700px;
 } 
 
 .swiper-container .swiper-wrapper img{
-	width: 1688px;
+	width: 1519px;
 	height: 700px;
 }
 
@@ -232,7 +233,7 @@ input{
 	position: absolute;
 	z-index: 9;
 	top: 0;
-	left: 227px;
+	left: 142px;
 }
 #banner-l li{
 	height: 31px;
@@ -315,11 +316,11 @@ input{
 /* 模块 */
 
 #banxin-wrap{
-	height: 2000px;
+	/* height: 2000px; */
 }
 
 .banxin{
-	height: 2000px;
+	/* height: 2000px; */
 }
 .banxin .block1 {
 	width: 1229px;
@@ -466,11 +467,22 @@ input{
 	display: block; 
 	width: 237px;
 	height: 302px;
-	background: url(../images/images_20.jpg);
+	padding: 18px;
+	box-sizing: border-box;
+	text-align: center;
 }
-
-
-
+.banxin .block3 .block3-b .block3-b-r .b01 li a div img{
+	width: 199px;
+	height: 200px;
+}
+.banxin .block3 .block3-b .block3-b-r .b01 li a div p{
+	color: black;
+}
+.banxin .block3 .block3-b .block3-b-r .b01 li a div span{
+	color: red;
+	width: 199px;
+	font-size: 19px;
+}
 
 .banxin .block4{
 	height: 650px;
@@ -860,3 +872,134 @@ input{
 	height: 302px;
 	background: url(../images/img_06_35.jpg);
 }
+
+
+
+#quanyi-wrap{
+	height: 378px;
+	border-top: 1px solid #999;
+}
+#quanyi-wrap .quanyi{
+	height: 378px;
+	border-bottom: 1px solid #eee;
+}
+#quanyi-wrap .quanyi  a{
+	display: block;
+	width: 1280px;
+	height: 166px;
+	background: url(../images/img_02.jpg);
+}
+#quanyi-wrap .quanyi .quanyi-b{
+	height: 212px;
+	padding-left: 80px;
+	padding-top: 25px;
+	box-sizing: border-box;
+}
+#quanyi-wrap .quanyi .quanyi-b dl{
+	float: left;
+	margin-right: 160px;
+}
+#quanyi-wrap .quanyi .quanyi-b dl dt{
+	font-size: 14px;
+	font-weight: 700;
+	color: #646464;
+	margin-bottom: 10px;
+}
+#quanyi-wrap .quanyi .quanyi-b dl dd{
+	font-size: 12px;
+	font-weight: 400;
+	color: #999;
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima{
+	width: 102px;
+	height: 130px;
+	float: left;
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima span{
+	font-weight: 700;
+	font-size: 14px;
+	color: #646464;
+	
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima a{
+	display: block;
+	width: 102px;
+	height: 101px;
+	background: url(../images/img_05.jpg);
+	margin-top: 10px;
+}
+
+
+/* 尾部 */
+#footer-wrap{
+	height: 220px;
+	border-top: 2px solid #FF0036;
+	background: #000;
+	/* position: absolute;
+	bottom: 0px; */
+	}
+	.footer{
+		height: 220px;
+		/* border-top: 2px solid #FF0036; */
+		margin: 0 auto;
+	
+	}
+	.footer .tianmao{
+		width: 72px;
+		height: 23px;
+		background: url(../images/img_03.jpg);
+		position: absolute;
+		top: -25px;
+		left: 200px;
+	}
+	.footer li {
+		float: left;
+	}
+	.footer1{
+		height: 34px;
+		line-height: 34px;
+	}
+	.footer2{
+		float: left;
+		height: 34px;
+		line-height: 34px;
+		margin-bottom: 10px;
+	}
+	.footer li a{
+		margin: 0 5px;
+		font-size: 12px;
+		color: #fff;
+		
+	}
+	
+	.footer li a:hover{
+		text-decoration: underline;
+	}
+	.footer3{
+		float: left;
+	  
+	}
+	.footer3 li{
+		float: left;
+		 margin-right: 50px;
+	}
+	.footer3 li span{
+		font-size: 12px;
+		color: #666;
+	}
+	.footer3 li a{
+		font-size: 10px;
+		color: #999999;
+	}
+	.footer3 li i{
+		color: #747774;
+		font-size: 12px;
+	}
+	.footer .banquan{
+		float: left;
+	}
+	.footer .banquan span{
+		color: #747774;
+		font-size: 12px;
+	}
+	
