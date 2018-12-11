@@ -35,7 +35,7 @@ var login = (function(){
 				_this.$dengluma.style.left = '100px';
 			}
 			this.$btn.onclick = function(){
-				sendAjax('php/login.php', {
+				sendAjax('http://10.36.141.37:6524/vivo/program/tianmao/app/static/php/login.php', {
 					method: 'GET',
 					data:{
 						username: _this.$user.value,
