@@ -63,7 +63,8 @@ input{
 	color: red;
 }
 .header ul {
-	float: right;
+    float: right;
+    position: relative;
 }
 .header ul li{
 	float: left;
@@ -71,6 +72,56 @@ input{
 	font-size: 12px;
 	color: #999999;
 }
+
+.header ul li:nth-child(1) div{
+    width: 100px;
+    height: 65px;
+    padding-left: 8px;
+    position: absolute;
+    left: 0px;
+    top: 33px;
+    background: #fff;
+	display: none;
+	z-index: 11;
+}
+.header ul li:nth-child(1):hover{
+    background: #fff;
+}
+.header ul li:nth-child(1):hover div{
+    background: #fff;
+    display: block;
+}
+.header ul li:nth-child(6):hover{
+    background: #fff;
+}
+.header ul li:nth-child(6):hover div{
+    display: block;
+}
+.header ul li:nth-child(6) div{
+    width: 150px;
+    height: 170px;
+    background: #fff;
+    position: absolute;
+    left: 283px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+	display: none;
+	
+}
+.header ul li:nth-child(6) div p{
+    height: 20px;
+    line-height: 20px;
+}
+.header ul li:nth-child(6) div h5{
+    height: 1px;
+    border-bottom: 1px dotted #999999;
+}
+.header ul li:nth-child(6) div span{
+    color: #999999;
+    font-weight: 700;
+}
+
 .header ul li a{
 	font-size: 12px;
 	color: #999999;
@@ -91,7 +142,6 @@ input{
 	color: red;
 	margin-right: 3px;
 }
-
 
  /*头部*/
 
@@ -469,6 +519,10 @@ input{
 	height: 302px;
 	background: url(../images/images_20.jpg);
 }
+
+
+
+
 
 
 

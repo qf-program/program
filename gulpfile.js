@@ -47,6 +47,11 @@ gulp.task('minihtml', function () {//压缩html
 gulp.task('minicss', function () {//压缩css
   gulp.src('tianmao/app/static/css/*.css')
     .pipe(csso())
+    .on('error', function(error){
+      console.log(error.message)
+      this.emit('done')
+
+    })
     .pipe(gulp.dest('dist/static/css'))
 });
 
