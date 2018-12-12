@@ -257,15 +257,14 @@ class showDetailsInfo {
     var arr = new Array();
     var newArr = new Array();
 
-    $(".banner-l .img-box li").click(function () {
-
+    $(".banner-l .box .img-box li").click(function () {
       index = $(this).index();
 
       for (var i = 0; i < res.length; i++) {
         newArr.push(res[i].src, res[i].src1, res[i].src2, res[i].src3);
         arr.push(newArr.splice(0, 4));
       }
-      // $(".banner-l .box ul li").eq(index).addClass("active").siblings().removeClass("active");
+      $(".banner-l .box .img-box li").eq(index).addClass("active").siblings().removeClass("active");
 
       if (bid == 101) {
         $(".show-image img").attr('src', "images/" + arr[0][index]);
@@ -282,65 +281,64 @@ class showDetailsInfo {
         $(".show-image img").attr('src', "images/" + arr[5][index]);
       }
 
-      $(".show-image").mouseenter = function () {
 
-        $(".filter").css('display', 'block');
-        $(".show-big-image").css('display', 'block');
-        alert(1)
-        if (bid == 101) {
-          $("#big-image").attr('src', "images/" + arr[0][index]);
-        } else if (bid == 102) {
-          $("#big-image").attr('src', "images/" + arr[1][index]);
-        } else if (bid == 103) {
-          $("#big-image").attr('src', "images/" + arr[2][index]);
-        } else if (bid == 104) {
-          $("#big-image").attr('src', "images/" + arr[3][index]);
-        } else if (bid == 105) {
-          $("#big-image").attr('src', "images/" + arr[3][index]);
-        } else if (bid == 106) {
-          $("#big-image").attr('src', "images/" + arr[3][index]);
-        }
-      }
-
-      //鼠标移出隐藏
-      $(".show-image").mouseleave = function () {
-        $(".filter").css('display', 'none');
-        $(".show-big-image").css('display', 'none');
-      }
-
-      $(".show-image").mousemove = function (e) {
-        var e = e || event;
-        var l = e.pageX - $(".show-image").offset().left - $(".filter").width() / 2;
-        var t = e.pageY - $(".show-image").offset().top - $(".filter").height() / 2;
-
-        var left = $(".show-image").width() - $(".filter").width();
-        var top = $(".show-image").height() - $(".filter").height();
-
-        if (l < 0) {
-          l = 0;
-        } else if (l > left) {
-          l = left;
-        }
-        if (t < 0) {
-          t = 0;
-        } else if (t > top) {
-          t = top;
-        }
-        $(".filter").css({
-          left: l,
-          top: t
-        })
-        //比例
-        var maxingL = l * $("#bigImg").width() / $(".show-image").width();
-        var maxingT = t * $("#bigImg").height() / $(".show-image").height();
-
-        $("#bigImg").css({
-          left: -maxingL,
-          top: -maxingT
-        })
-      }
 
     });
+    $(".show-image").mouseenter(function () {
+      $(".filter").css('display', 'block');
+      $(".show-big-image").css('display', 'block');
+      if (bid == 101) {
+        $("#big-image").attr('src', "images/" + arr[0][index]);
+      } else if (bid == 102) {
+        $("#big-image").attr('src', "images/" + arr[1][index]);
+      } else if (bid == 103) {
+        $("#big-image").attr('src', "images/" + arr[2][index]);
+      } else if (bid == 104) {
+        $("#big-image").attr('src', "images/" + arr[3][index]);
+      } else if (bid == 105) {
+        $("#big-image").attr('src', "images/" + arr[4][index]);
+      } else if (bid == 106) {
+        $("#big-image").attr('src', "images/" + arr[5][index]);
+      }
+    })
+
+    //鼠标移出隐藏
+    $(".show-image").mouseleave(function () {
+      $(".filter").css('display', 'none');
+      $(".show-big-image").css('display', 'none');
+    })
+
+    $(".show-image").mousemove(function (e) {
+      var e = e || event;
+      var l = e.pageX - $(".show-image").offset().left - $(".filter").width() / 2;
+      var t = e.pageY - $(".show-image").offset().top - $(".filter").height() / 2;
+
+      var left = $(".show-image").width() - $(".filter").width();
+      var top = $(".show-image").height() - $(".filter").height();
+
+      if (l < 0) {
+        l = 0;
+      } else if (l > left) {
+        l = left;
+      }
+      if (t < 0) {
+        t = 0;
+      } else if (t > top) {
+        t = top;
+      }
+      $(".filter").css({
+        left: l,
+        top: t
+      })
+      //比例
+      var maxingL = l * $("#big-image").width() / $(".show-image").width();
+      var maxingT = t * $("#big-image").height() / $(".show-image").height();
+
+      $("#big-image").css({
+        left: -maxingL,
+        top: -maxingT
+      })
+    })
 
   }
 
