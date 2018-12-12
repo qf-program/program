@@ -19,12 +19,6 @@ var mySwiper = new Swiper('.swiper-container', {
 $(function () {
       var obj = {
             shopInfo: $("#shop"),
-            shop1: $(".shop1"),
-            shop2: $(".shop2"),
-            shop3: $(".shop3"),
-            shop4: $(".shop4"),
-            shop5: $(".shop5"),
-            shop6: $(".shop6"),
       }
       new ShopInfo(obj);
 })
@@ -32,12 +26,6 @@ $(function () {
 class ShopInfo {
       constructor(obj) {
             this.shopInfo = obj.shopInfo;
-            this.shop1 = obj.shop1;
-            this.shop2 = obj.shop2;
-            this.shop3 = obj.shop3;
-            this.shop4 = obj.shop4;
-            this.shop5 = obj.shop5;
-            this.shop6 = obj.shop6;
             this.showShops();
       };
 
