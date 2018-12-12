@@ -198,44 +198,44 @@ input{
     color: white;
     background: #ababab;
 }
-.cart-center .item{
+ .cart .item{
     height: 50px;
 }
-.cart-center .item ul li{
+.cart .item ul li{
     float: left;
     line-height: 50px;
     font-size: 13px;
 }
-.cart-center .item ul li:nth-child(1){
+ .item ul li:nth-child(1){
     width: 80px;
     color: #999999;
 }
-.cart-center .item ul li:nth-child(2){
+ .item ul li:nth-child(2){
     width: 211px;
     margin-left: 91px;
 }
 
-.cart-center .item ul li:nth-child(3){
+ .item ul li:nth-child(3){
     width: 162px;
     height: 50px;
     margin-left: 10px;
 }
 
-.cart-center .item ul li:nth-child(4){
+ .item ul li:nth-child(4){
     width: 110px;
     margin-left: 10px;
 }
 
-.cart-center .item ul li:nth-child(5){
+ .item ul li:nth-child(5){
     width: 110px;
     margin-left: 10px;
 }
 
-.cart-center .item ul li:nth-child(6){
+ .item ul li:nth-child(6){
     width: 90px;
 }
 
-.cart-center .item ul li:nth-child(7){
+ .item ul li:nth-child(7){
     width: 84px;
     margin-left: 15px;
 }
@@ -336,18 +336,12 @@ input{
     display: flex;
     box-sizing: border-box;
 }
-.cart-center .goods .goods-bottom ul li:nth-child(5) a{
-    width: 19px;
-    height: 25px;
-    text-align: center;
-    line-height: 20px;
-    display: inline-block;
-    border:1px solid #999999;
-    background: #efefef;
+.cart-center .goods .goods-bottom ul li:nth-child(5) input:nth-child(2){
+    height: 21px;
 }
 .cart-center .goods .goods-bottom ul li:nth-child(5) input{
-    width: 41px;
-    height: 23px;
+    width: 30px;
+    height: 25px;
     text-align: center;
 }
 .cart-center .goods .goods-bottom ul li:nth-child(6){
@@ -384,6 +378,12 @@ input{
     height: 50px;
     line-height: 50px;
     float: left;
+    border: none;
+}
+.cart .cart-footer .footer-center input{
+    margin-left: 25px;
+    font-size: 13px;
+    color: black;
 }
 .cart .cart-footer .footer-center a{
     margin-left: 25px;

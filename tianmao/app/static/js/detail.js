@@ -352,13 +352,13 @@ class showDetailsInfo {
       }];
 
       var objStr = JSON.stringify(obj);
-      if (!localStorage.getItem(_this.uname + "shops")) {
+      if (!localStorage.getItem("shops")) {
         //当localStorage里面没有任何购物车信息，需要添加何购物车信息
-        localStorage.setItem(_this.uname + "shops", objStr);
+        localStorage.setItem("shops", objStr);
       } else {
         //当localStorage里面已经存在购物车信息，要判断当前点击的bid的这个商品在信息里是否存在 
         //如果有，在原来商品数量上加1，如果没有，重新在原来localStorage基础上追加1个商品
-        var cartshops = localStorage.getItem(_this.uname + "shops");
+        var cartshops = localStorage.getItem("shops");
         var cartshopsJson = JSON.parse(cartshops);
         //一个控制器，用户判断原来的购物车信息中是否存在当前的这个bid商品
         var flag = false; //false表示购物车信息中是没有当前的这个bid商品
@@ -378,7 +378,7 @@ class showDetailsInfo {
         }
         //添加到localStorage中
         var cartshopsJsonToStr = JSON.stringify(cartshopsJson);
-        localStorage.setItem(_this.uname + "shops", cartshopsJsonToStr);
+        localStorage.setItem("shops", cartshopsJsonToStr);
 
       }
       localStorage.getItem("shops");
@@ -391,9 +391,9 @@ class showDetailsInfo {
   //计算购物车商品总条数
   getCartCount() {
     //购物车信息存在，就可以来计算条数了
-    if (localStorage.getItem(this.uname + "shops")) {
+    if (localStorage.getItem("shops")) {
 
-      var cartshops = localStorage.getItem(this.uname + "shops");
+      var cartshops = localStorage.getItem("shops");
       var cartshopsJson = JSON.parse(cartshops);
       var sum = 0;
       for (var i = 0; i < cartshopsJson.length; i++) {
