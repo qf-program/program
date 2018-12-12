@@ -81,6 +81,8 @@ input{
     left: 0px;
     top: 33px;
     background: #fff;
+    z-index: 5;
+    border-radius: 3px;
     display: none;
 }
 .header ul li:nth-child(1):hover{
@@ -105,6 +107,8 @@ input{
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
+    z-index: 5;
+    border-radius: 3px;
     display: none;
 }
 .header ul li:nth-child(6) div p{
@@ -140,3 +144,258 @@ input{
 	color: red;
 	margin-right: 3px;
 }
+
+#shopname-wrap{
+    height: 160px;
+    position: relative;
+}
+#shopname-wrap a{
+    display: block;
+    width: 1519px;
+    height: 160px;
+    background: url(../images/kuangwei.jpg);
+}
+#shopname-wrap i{
+    display: block;
+    width: 280px;
+    height: 130px;
+    background: url(../images/img.png);
+    background-size: cover;
+    position: absolute;
+    left: 12%;
+    top: 18px;
+}
+#shopname-wrap span{
+    display: block;
+    width: 260px;
+    height: 130px;
+    background: url(../images/img11.png);
+    background-size: cover;
+    position: absolute;
+    right: 9%;
+    top: 18px;
+}
+
+#nav-wrap{
+  /* height: 100px; */
+  margin-top: 20px;
+}
+#nav-wrap p{
+    border: 1px solid #999999;
+    border-bottom: none;
+    height: 40px;
+    line-height: 40px;
+}
+#nav-wrap p:nth-child(3){
+    border-bottom: 1px solid #999;
+}
+#nav-wrap p:nth-child(2){
+    height: 80px;
+}
+#nav-wrap p:nth-child(2) span{
+    float: left;
+    display: block;
+    width: 100px;
+    height: 80px;
+    background-color: #eee;
+    font-size: 12px;
+    color: #999;
+    padding-left: 20px;
+    line-height: 40px;
+    /* box-sizing: border-box; */
+}
+
+#nav-wrap p span{
+    float: left;
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color: #eee;
+    font-size: 12px;
+    color: #999;
+    padding-left: 20px;
+    line-height: 40px;
+    /* box-sizing: border-box; */
+}
+
+#nav-wrap p a{
+    margin-left: 30px;
+    margin-right: 60px;
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+#goods-wrap{
+    margin-top: 20px;
+}
+#goods-wrap ul li{
+    float: left;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+#goods-wrap ul li a{
+    display: block;
+    width: 220px;
+    height: 290px;
+    border: 1px solid #999;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#goods-wrap ul li  .tupian{
+    width: 210px;
+    height: 200px;
+}
+#goods-wrap ul li a .price{
+   font-size: 18px;
+   font-weight: 400;
+   color: red;
+   margin-bottom: 10px;
+}
+#goods-wrap ul li a .miaoshu{
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+ }
+
+
+
+
+
+ /* 底部 */
+ #quanyi-wrap{
+    width: 100%;
+	height: 378px;
+    border-top: 1px solid #999;
+    float: left;
+    margin-top: 30px;
+}
+#quanyi-wrap .quanyi{
+	height: 378px;
+    border-bottom: 1px solid #eee;
+    
+}
+#quanyi-wrap .quanyi  a{
+	display: block;
+	width: 1280px;
+	height: 166px;
+    background: url(../images/img_02.jpg);
+    margin: 0 auto;
+}
+#quanyi-wrap .quanyi .quanyi-b{
+	height: 212px;
+	padding-left: 80px;
+	padding-top: 25px;
+	box-sizing: border-box;
+}
+#quanyi-wrap .quanyi .quanyi-b dl{
+	float: left;
+	margin-right: 160px;
+}
+#quanyi-wrap .quanyi .quanyi-b dl dt{
+	font-size: 14px;
+	font-weight: 700;
+	color: #646464;
+	margin-bottom: 10px;
+}
+#quanyi-wrap .quanyi .quanyi-b dl dd{
+	font-size: 12px;
+	font-weight: 400;
+	color: #999;
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima{
+	width: 102px;
+	height: 130px;
+	float: left;
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima span{
+	font-weight: 700;
+	font-size: 14px;
+	color: #646464;
+	
+}
+#quanyi-wrap .quanyi .quanyi-b .erweima a{
+	display: block;
+	width: 102px;
+	height: 101px;
+	background: url(../images/img_05.jpg);
+	margin-top: 10px;
+}
+
+
+/* 尾部 */
+#footer-wrap{
+    width: 100%;
+	height: 220px;
+	border-top: 2px solid #FF0036;
+	background: #000;
+	/* position: absolute;
+    bottom: 0px; */
+    float: left;
+	}
+	.footer{
+		height: 220px;
+		/* border-top: 2px solid #FF0036; */
+		margin: 0 auto;
+	
+	}
+	.footer .tianmao{
+		width: 72px;
+		height: 23px;
+		background: url(../images/img_03.jpg);
+		position: absolute;
+		top: -25px;
+		left: 200px;
+	}
+	.footer li {
+		float: left;
+	}
+	.footer1{
+		height: 34px;
+		line-height: 34px;
+	}
+	.footer2{
+		float: left;
+		height: 34px;
+		line-height: 34px;
+		margin-bottom: 10px;
+	}
+	.footer li a{
+		margin: 0 5px;
+		font-size: 12px;
+		color: #fff;
+		
+	}
+	
+	.footer li a:hover{
+		text-decoration: underline;
+	}
+	.footer3{
+		float: left;
+	  
+	}
+	.footer3 li{
+		float: left;
+		 margin-right: 50px;
+	}
+	.footer3 li span{
+		font-size: 12px;
+		color: #666;
+	}
+	.footer3 li a{
+		font-size: 10px;
+		color: #999999;
+	}
+	.footer3 li i{
+		color: #747774;
+		font-size: 12px;
+	}
+	.footer .banquan{
+		float: left;
+	}
+	.footer .banquan span{
+		color: #747774;
+		font-size: 12px;
+	}

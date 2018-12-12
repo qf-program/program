@@ -7,7 +7,7 @@ var rename = require('gulp-rename'); // 修改文件名
 var connect = require('gulp-connect'); //服务器
 var watch = require('gulp-watch');
 const htmlmin = require('gulp-htmlmin');//压缩HTML
-var csso = require('gulp-csso');//压缩css
+let cleanCSS = require('gulp-clean-css');//压缩css
 const imagemin = require('gulp-imagemin'); //压缩图片
 var sass = require('gulp-sass');  //sass 转css
 sass.compiler = require('node-sass');
@@ -39,14 +39,14 @@ gulp.task('stream', function () {
 });
 
 gulp.task('minihtml', function () {//压缩html
-  gulp.src('tianmao/app/static/a.html')
+  gulp.src('tianmao/app/static/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('dist/static'));
 });
 
 gulp.task('minicss', function () {//压缩css
   gulp.src('tianmao/app/static/css/*.css')
-    .pipe(csso())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .on('error', function(error){
       console.log(error.message)
       this.emit('done')

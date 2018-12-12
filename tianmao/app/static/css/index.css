@@ -517,11 +517,22 @@ input{
 	display: block; 
 	width: 237px;
 	height: 302px;
-	background: url(../images/images_20.jpg);
+	padding: 18px;
+	box-sizing: border-box;
+	text-align: center;
 }
-
-
-
+.banxin .block3 .block3-b .block3-b-r .b01 li a div img{
+	width: 199px;
+	height: 200px;
+}
+.banxin .block3 .block3-b .block3-b-r .b01 li a div p{
+	color: black;
+}
+.banxin .block3 .block3-b .block3-b-r .b01 li a div span{
+	color: red;
+	width: 199px;
+	font-size: 19px;
+}
 
 
 
