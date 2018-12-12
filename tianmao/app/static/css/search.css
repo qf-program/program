@@ -243,6 +243,9 @@ input{
     padding: 5px;
     box-sizing: border-box;
 }
+#goods-wrap ul li a:hover{
+    border: 2px solid red;
+}
 
 #goods-wrap ul li  .tupian{
     width: 210px;

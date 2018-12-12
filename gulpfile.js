@@ -12,6 +12,8 @@ const imagemin = require('gulp-imagemin'); //压缩图片
 var sass = require('gulp-sass');  //sass 转css
 sass.compiler = require('node-sass');
 
+var runSequence = require('run-sequence');
+
 gulp.task('minijs', function () {   //压缩js
   // 将你的默认的任务代码放在这
   gulp.src('tianmao/app/static/js/*.js')
@@ -67,3 +69,19 @@ gulp.task('sass', function () {    //sass转化
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/static/css'));
 });
+
+gulp.task('watch', function(){
+  gulp.watch('tianmao/app/**/*.html', ['minihtml'])
+  gulp.watch('tianmao/app/**/*.js', ['minijs'])
+  gulp.watch('tianmao/app/**/*.css', ['minicss'])
+})
+
+gulp.task('dev', function(callback){
+  runSequence(
+      ['minijs','minicss','minihtml', 'miniimg'],
+      'connect',
+      'watch',
+      callback
+  );
+})
+
