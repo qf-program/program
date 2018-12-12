@@ -267,6 +267,7 @@ input{
     background-position: -83px 0;
 }
 .cart-center .goods{
+    height: 171px;
     border: 1px solid #ccc;
 }
 .cart-center .goods .goods-top{
@@ -371,7 +372,7 @@ input{
     margin-top: 18px;
 }
 .cart .cart-footer .footer-left{
-    width: 55px;
+    width: 100px;
     height: 50px;
     line-height: 50px;
     float: left;

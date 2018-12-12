@@ -20,7 +20,7 @@
                 <a href="register.html">免费注册</a>
             </div>
             <ul>
-                <li><a href="#">我的淘宝<i class="iconfont icon-sanjiao1"></i></a></li>
+                <li><a href="shouye.html">我的淘宝<i class="iconfont icon-sanjiao1"></i></a></li>
                 <li><a href="#"><span class="iconfont icon-gouwuche"></span>购物车<i class="iconfont icon-sanjiao1"></i></a></li>
                 <li><a href="#" class="line">收藏夹<i class="iconfont icon-sanjiao1"></i></a>|</li>
                 <li><a href="#"><span class="iconfont icon-shouji"></span>手机版<i class="iconfont icon-sanjiao1"></i></a></li>
@@ -58,14 +58,14 @@
                     </ul>
                     <div class="cart-num">
                         <span>已选商品（不含运费）</span>
-                        <strong>0.00</strong>
+                        <strong id="totalPrice">0.00</strong>
                         <a href="#">结 算</a>
                     </div>
                 </div>
                 <div class="cart-center">
-                    <div class="item">
+                    <!-- <div class="item">
                         <ul>
-                            <li><input type="checkbox">&emsp;全选</li>
+                            <li><input type="checkbox" id="checkAll">&emsp;全选</li>
                             <li>商品信息</li>
                             <li></li>
                             <li>单价</li>
@@ -89,7 +89,7 @@
                         <div class="goods-bottom">
                             <ul>
                                 <li>
-                                    <input type="checkbox">
+                                    <input type="checkbox" class="checkOne">
                                 </li>
                                 <li>
                                     <div class="left"><img src="images/beiju.jpg" alt=""></div>
@@ -116,25 +116,25 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="cart-footer">
                     <div class="footer-left">
-                        <input type="checkbox">
-                        <span>全选</span>
+                        <input type="checkbox" id="deslection">
+                        取消选择
                     </div>
                     <div class="footer-center">
-                        <a href="#">删除</a>
+                        <a href="#" id="delCartshops">删除</a>
                         <a href="#">移入收藏夹</a>
                         <a href="#">分享</a>
                     </div>
                     <div class="footer-right">
                         <div class="cart-num2">
-                            <span>已选商品<em>0</em>件</span>
+                            <span>已选商品<em id="totalCount">0</em>件</span>
                         </div>
                         <div class="count">
                             <span>合计（不含运费）：</span>
-                            <strong>0.00</strong>
+                            <strong id="totalPrice">0.00</strong>
                         </div>
                         <div class="btn">
                             <a href="#">结算</a>
@@ -203,3 +203,5 @@
 </body>
 
 </html>
+<script src="js/jquery.js"></script>
+<script src="js/cart.js"></script>

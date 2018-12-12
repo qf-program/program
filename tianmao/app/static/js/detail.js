@@ -142,7 +142,7 @@
 //   }
 // }())
 // big.init();
-
+var uname = location.search.split("=")[1];
 
 (function ($) {
   //扩展方法获取url参数  
@@ -154,19 +154,21 @@
   }
 })(jQuery);
 
-
+var uname = $.getUrlParam("uname");
 $(function () {
   var obj = {
-    banner: $(".banner-l"),
+    banners: $(".banner-l"),
+    uname: uname,
     bid: $.getUrlParam("bid"),
-    cartPhonesNum: $("#cartPhonesNum")
+    cartShopsNum: $("#cartShopsNum")
   }
   new showDetailsInfo(obj);
 })
 
 class showDetailsInfo {
   constructor(obj) {
-    this.banner = obj.banner;
+    this.banners = obj.banners;
+    this.uname = obj.uname;
     this.bid = obj.bid;
     this.cartShopsNum = obj.cartShopsNum;
     this.getDetailsphones();
@@ -176,7 +178,7 @@ class showDetailsInfo {
     var _this = this;
     $.getJSON("json/tianmao.json", function (res) {
       _this.showDetailsInfo(res);
-      // _this.addCart();
+      _this.addCart();
     })
   };
 
@@ -268,7 +270,6 @@ class showDetailsInfo {
 
       if (bid == 101) {
         $(".show-image img").attr('src', "images/" + arr[0][index]);
-
       } else if (bid == 102) {
         $(".show-image img").attr('src', "images/" + arr[1][index]);
       } else if (bid == 103) {
@@ -280,68 +281,129 @@ class showDetailsInfo {
       } else if (bid == 106) {
         $(".show-image img").attr('src', "images/" + arr[5][index]);
       }
+      $(".show-image").mouseenter(function () {
+        $(".filter").css('display', 'block');
+        $(".show-big-image").css('display', 'block');
+        if (bid == 101) {
+          $("#big-image").attr('src', "images/" + arr[0][index]);
+        } else if (bid == 102) {
+          $("#big-image").attr('src', "images/" + arr[1][index]);
+        } else if (bid == 103) {
+          $("#big-image").attr('src', "images/" + arr[2][index]);
+        } else if (bid == 104) {
+          $("#big-image").attr('src', "images/" + arr[3][index]);
+        } else if (bid == 105) {
+          $("#big-image").attr('src', "images/" + arr[4][index]);
+        } else if (bid == 106) {
+          $("#big-image").attr('src', "images/" + arr[5][index]);
+        }
+      })
 
+      //鼠标移出隐藏
+      $(".show-image").mouseleave(function () {
+        $(".filter").css('display', 'none');
+        $(".show-big-image").css('display', 'none');
+      })
 
+      $(".show-image").mousemove(function (e) {
+        var e = e || event;
+        var l = e.pageX - $(".show-image").offset().left - $(".filter").width() / 2;
+        var t = e.pageY - $(".show-image").offset().top - $(".filter").height() / 2;
 
+        var left = $(".show-image").width() - $(".filter").width();
+        var top = $(".show-image").height() - $(".filter").height();
+
+        if (l < 0) {
+          l = 0;
+        } else if (l > left) {
+          l = left;
+        }
+        if (t < 0) {
+          t = 0;
+        } else if (t > top) {
+          t = top;
+        }
+        $(".filter").css({
+          left: l,
+          top: t
+        })
+        //比例
+        var maxingL = l * $("#big-image").width() / $(".show-image").width();
+        var maxingT = t * $("#big-image").height() / $(".show-image").height();
+
+        $("#big-image").css({
+          left: -maxingL,
+          top: -maxingT
+        })
+      })
     });
-    $(".show-image").mouseenter(function () {
-      $(".filter").css('display', 'block');
-      $(".show-big-image").css('display', 'block');
-      if (bid == 101) {
-        $("#big-image").attr('src', "images/" + arr[0][index]);
-      } else if (bid == 102) {
-        $("#big-image").attr('src', "images/" + arr[1][index]);
-      } else if (bid == 103) {
-        $("#big-image").attr('src', "images/" + arr[2][index]);
-      } else if (bid == 104) {
-        $("#big-image").attr('src', "images/" + arr[3][index]);
-      } else if (bid == 105) {
-        $("#big-image").attr('src', "images/" + arr[4][index]);
-      } else if (bid == 106) {
-        $("#big-image").attr('src', "images/" + arr[5][index]);
+
+  };
+
+  addCart() {
+    var _this = this;
+    this.banners.find(".car").click(function () {
+
+      var bid = $(this).parent().parent().find(".bid").html();
+      //点击时，要保存当前商品的编号，商品的数量，每点击一次添加1条商品。
+      var obj = [{
+        "bid": bid,
+        "count": 1
+      }];
+
+      var objStr = JSON.stringify(obj);
+      if (!localStorage.getItem(_this.uname + "shops")) {
+        //当localStorage里面没有任何购物车信息，需要添加何购物车信息
+        localStorage.setItem(_this.uname + "shops", objStr);
+      } else {
+        //当localStorage里面已经存在购物车信息，要判断当前点击的bid的这个商品在信息里是否存在 
+        //如果有，在原来商品数量上加1，如果没有，重新在原来localStorage基础上追加1个商品
+        var cartshops = localStorage.getItem(_this.uname + "shops");
+        var cartshopsJson = JSON.parse(cartshops);
+        //一个控制器，用户判断原来的购物车信息中是否存在当前的这个bid商品
+        var flag = false; //false表示购物车信息中是没有当前的这个bid商品
+        for (var i = 0; i < cartshopsJson.length; i++) {
+          if (cartshopsJson[i].bid == bid) {
+            cartshopsJson[i].count++;
+            flag = true; //true表示购物车信息中已经存在当前的这个bid商品
+          }
+        }
+        if (!flag) { //购物车信息中是没有当前的这个bid商品
+          //追加一条
+          var newBidInfo = {
+            "bid": bid,
+            "count": 1
+          };
+          cartshopsJson.push(newBidInfo);
+        }
+        //添加到localStorage中
+        var cartshopsJsonToStr = JSON.stringify(cartshopsJson);
+        localStorage.setItem(_this.uname + "shops", cartshopsJsonToStr);
+
       }
+      localStorage.getItem("shops");
+      //点击添加购物车时计算购物车商品总条数
+      _this.getCartCount();
+
     })
+  };
 
-    //鼠标移出隐藏
-    $(".show-image").mouseleave(function () {
-      $(".filter").css('display', 'none');
-      $(".show-big-image").css('display', 'none');
-    })
+  //计算购物车商品总条数
+  getCartCount() {
+    //购物车信息存在，就可以来计算条数了
+    if (localStorage.getItem(this.uname + "shops")) {
 
-    $(".show-image").mousemove(function (e) {
-      var e = e || event;
-      var l = e.pageX - $(".show-image").offset().left - $(".filter").width() / 2;
-      var t = e.pageY - $(".show-image").offset().top - $(".filter").height() / 2;
-
-      var left = $(".show-image").width() - $(".filter").width();
-      var top = $(".show-image").height() - $(".filter").height();
-
-      if (l < 0) {
-        l = 0;
-      } else if (l > left) {
-        l = left;
+      var cartshops = localStorage.getItem(this.uname + "shops");
+      var cartshopsJson = JSON.parse(cartshops);
+      var sum = 0;
+      for (var i = 0; i < cartshopsJson.length; i++) {
+        sum += cartshopsJson[i].count;
       }
-      if (t < 0) {
-        t = 0;
-      } else if (t > top) {
-        t = top;
-      }
-      $(".filter").css({
-        left: l,
-        top: t
-      })
-      //比例
-      var maxingL = l * $("#big-image").width() / $(".show-image").width();
-      var maxingT = t * $("#big-image").height() / $(".show-image").height();
-
-      $("#big-image").css({
-        left: -maxingL,
-        top: -maxingT
-      })
-    })
-
+      this.cartShopsNum.html(sum);
+    } else {
+      return
+    }
   }
-
 
 
 }
