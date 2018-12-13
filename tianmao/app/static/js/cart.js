@@ -1,4 +1,3 @@
-debugger
 $(function () {
     var obj = {
         carts: $(".cart-center"),
