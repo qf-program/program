@@ -16,12 +16,12 @@ var runSequence = require('run-sequence');
 
 gulp.task('minijs', function () {   //压缩js
   // 将你的默认的任务代码放在这
-  gulp.src('tianmao/app/static/js/*.js')
+  gulp.src('tianmao/app/static/**/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/static/js'))
+    .pipe(gulp.dest('dist/static/'))
 })
 gulp.task('hebing', function () {   //合并js
   gulp.src('tianmao/app/js/*.js')
@@ -48,8 +48,8 @@ gulp.task('minihtml', function () {//压缩html
 
 gulp.task('minicss', function () {//压缩css
   gulp.src('tianmao/app/static/css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .on('error', function(error){
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
+    .on('error', function (error) {
       console.log(error.message)
       this.emit('done')
 
@@ -70,18 +70,18 @@ gulp.task('sass', function () {    //sass转化
     .pipe(gulp.dest('dist/static/css'));
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', function () {
   gulp.watch('tianmao/app/**/*.html', ['minihtml'])
   gulp.watch('tianmao/app/**/*.js', ['minijs'])
   gulp.watch('tianmao/app/**/*.css', ['minicss'])
 })
 
-gulp.task('dev', function(callback){
+gulp.task('dev', function (callback) {
   runSequence(
-      ['minijs','minicss','minihtml', 'miniimg'],
-      'connect',
-      'watch',
-      callback
+    ['minijs', 'minicss', 'minihtml', 'miniimg'],
+    'connect',
+    'watch',
+    callback
   );
 })
 

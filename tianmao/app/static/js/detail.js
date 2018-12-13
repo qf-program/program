@@ -142,7 +142,7 @@
 //   }
 // }())
 // big.init();
-var uname = location.search.split("=")[1];
+// var uname = location.search.split("=")[1];
 
 (function ($) {
   //扩展方法获取url参数  
@@ -154,11 +154,11 @@ var uname = location.search.split("=")[1];
   }
 })(jQuery);
 
-var uname = $.getUrlParam("uname");
+// var uname = $.getUrlParam("uname");
 $(function () {
   var obj = {
     banners: $(".banner-l"),
-    uname: uname,
+    // uname: uname,
     bid: $.getUrlParam("bid"),
     cartShopsNum: $("#cartShopsNum")
   }
@@ -168,7 +168,7 @@ $(function () {
 class showDetailsInfo {
   constructor(obj) {
     this.banners = obj.banners;
-    this.uname = obj.uname;
+    // this.uname = obj.uname;
     this.bid = obj.bid;
     this.cartShopsNum = obj.cartShopsNum;
     this.getDetailsphones();

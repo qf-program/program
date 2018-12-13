@@ -49,7 +49,7 @@ class ShopInfo {
                   <i style="display:none" class="bid">${res[i].bid}</i>
                   <img src="images/${res[i].src}">
                   <p>${res[i].describe}</p>
-                  <span>${res[i].price}</span>
+                  <span>￥${res[i].price}</span>
                   </div>
                   </a>	
                   </li>

@@ -1,3 +1,4 @@
+debugger
 $(function () {
     var obj = {
         carts: $(".cart-center"),
@@ -10,7 +11,6 @@ $(function () {
     }
     new ShowCartGoodsInfo(obj);
 })
-
 class ShowCartGoodsInfo {
     constructor(obj) {
         this.carts = obj.carts;
