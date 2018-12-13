@@ -63,6 +63,14 @@ gulp.task('miniimg', function () {//压缩图片
     .pipe(gulp.dest('dist/static/images'))
 });
 
+gulp.task('minijson', function () {
+  gulp.src('tianmao/app/static/json/*.json')
+    .pipe(gulp.dest('dist/static/json'))
+});
+gulp.task('miniphp', function () {
+  gulp.src('tianmao/app/static/php/*.php')
+    .pipe(gulp.dest('dist/static/php'))
+});
 
 gulp.task('sass', function () {    //sass转化
   return gulp.src('tianmao/app/static/css/*.scss')
@@ -78,7 +86,7 @@ gulp.task('watch', function () {
 
 gulp.task('dev', function (callback) {
   runSequence(
-    ['minijs', 'minicss', 'minihtml', 'miniimg'],
+    ['minijs', 'minicss', 'minihtml', 'miniimg', 'minijson', 'miniphp'],
     'connect',
     'watch',
     callback

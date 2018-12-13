@@ -284,7 +284,6 @@ class showDetailsInfo {
 
     });
     $(".show-image").mouseenter(function () {
-      index = $(this).index();
       $(".filter").css('display', 'block');
       $(".show-big-image").css('display', 'block');
       if (bid == 101) {
@@ -339,7 +338,6 @@ class showDetailsInfo {
         top: -maxingT
       })
     })
-
   };
 
   addCart() {
